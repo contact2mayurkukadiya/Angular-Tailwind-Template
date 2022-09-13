@@ -10,6 +10,14 @@ import { Chart } from 'chart.js';
 export class ChartComponent implements OnInit {
   chartData: any = JSON.parse(JSON.stringify(chartJSON as any));
   data: any = this.chartData.chartData;
+  chart_usage : any = `
+  import { ChartJSModule } from "";
+
+  @NgModule({
+    imports: [ChartJSModule,...]
+  })
+  export class AppModule(){}
+  `;
 
   constructor() {}
 

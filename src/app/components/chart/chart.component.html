@@ -1,13 +1,30 @@
-<div class="grid grid-cols-2 gap-2">
-  <ng-container *ngFor="let item of data">
-    <div
-      class="rounded overflow-hidden shadow-lg hover:shadow-[#00000082] dark:hover:shadow-black shadow-[#00000047] dark:shadow-[#0000008c] bg-gray-50 dark:bg-slate-800 m-4 min-w-full min-h-full">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2 dark:text-white">
-          {{ item.title }}
+<div
+  class="rounded overflow-hidden shadow-lg hover:shadow-[#00000082] dark:hover:shadow-black shadow-[#00000047] dark:shadow-[#0000008c] bg-gray-50 dark:bg-slate-800 m-4 min-w-full min-h-full">
+  <div class="px-6 py-4">
+  <h6 class="text-2xl mt-0 mb-2 font-medium">Chart JS</h6>
+  <p>You can use Chart JS to add interactive, stunning, geographical maps to your websites or applications. Just like any other chart.</p>
+
+  <div class="mt-4">
+    <h6 class="text-2xl mb-2 font-medium">Usage</h6>
+    <app-code-highlighter-widget [code]="chart_usage"></app-code-highlighter-widget>
+  </div>
+
+  <div class="mt-4">
+    <h6 class="text-2xl mb-2 font-medium">Example</h6>
+    <ng-container *ngFor="let item of data">
+        <div>
+          <h1 class="leading-tight font-medium text-l mt-0 mb-2">{{ item.title }}</h1>
+          <p>Line graphs show how a continuous variable changes over time, for example, get trends in sales or profit margins each month, quarter, or year.
+  
+            The variable that measures time is plotted on the x-axis. The continuous variable is plotted on the y-axis.</p>
         </div>
         <app-chart-widget [config]="item"></app-chart-widget>
-      </div>
+      </ng-container>
+  </div>
+
+  <div class="mt-4">
+    <h6 class="text-2xl mb-2 font-medium">API Reference</h6>
+    <h1 class="leading-tight font-medium text-l mt-0 mb-2">ChartComponent</h1>
+  </div>
     </div>
-  </ng-container>
 </div>

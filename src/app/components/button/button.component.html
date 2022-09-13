@@ -1,59 +1,257 @@
 <div
-  class="rounded overflow-hidden shadow-lg hover:shadow-[#00000082] dark:hover:shadow-black shadow-[#00000047] dark:shadow-[#0000008c] bg-white dark:bg-slate-800 m-4 min-w-full min-h-full"
->
+  class="rounded overflow-hidden shadow-lg hover:shadow-[#00000082] dark:hover:shadow-black shadow-[#00000047] dark:shadow-[#0000008c] bg-white dark:bg-slate-800 m-4 min-w-full min-h-full">
   <div class="px-6 py-4">
     <div>
-      <h4 class="font-medium leading-tight text-2xl mt-0 mb-2">Buttons</h4>
+      <h6 class="text-2xl mt-0 mb-2 font-medium">Buttons</h6>
       <p>{{ description }}</p>
     </div>
-    <ng-container *ngFor="let button of data">
-      <div class="font-bold text-xl mb-2 dark:text-white">
-        {{ button.btn_title }}
-      </div>
-      <ng-container *ngIf="button.icon; else second">
-        <button
-          #firstBtn
-          class="{{
-            button.use_css ? button.external_class : button.tailwind_class
-          }}"
-        >
-          <svg
-            class="fill-current w-4 h-4 mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-          </svg>
-          <span>Download</span>
-        </button>
-        <app-code-highlighter-widget
-          [code]="button.code"
-        ></app-code-highlighter-widget>
-      </ng-container>
-      <ng-template #second>
-        <ng-container *ngIf="button.id == 'btnGrouped'; else third">
-          <div #secondBtn>
-            <button class="{{ button.tailwind_class }} rounded-l">Prev</button>
-            <button class="{{ button.tailwind_class }} rounded-r">Next</button>
+
+    <div class="mt-4">
+      <h6 class="text-2xl mb-2 font-medium">Example</h6>
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Simple</h1>
+          <p>Use these default button styles with multiple colors to indicate an action or link within your website.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Primary</button>
           </div>
-          <app-code-highlighter-widget
-            [code]="secondBtn.outerHTML"
-          ></app-code-highlighter-widget>
-        </ng-container>
-      </ng-template>
-      <ng-template #third>
-        <button
-          #thirdBtn
-          class="{{
-            button.use_css ? button.external_class : button.tailwind_class
-          }}"
-        >
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Colors</h1>
+          <p>Choose from several predefined button styles, each serving its own semantic purpose, with a few extras thrown
+            in for more control.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Primary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Secondary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out">Success</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Danger</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out">Warning</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-500 hover:shadow-lg focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out">Info</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-gray-200 text-gray-700 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out">Light</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Dark</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out">Link</button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Ripple</h1>
+          <p>Use the ripple effect and provide feedback to users in a simple and elegant way in the form of a wave
+            animation. It also changes position depending on where each button is clicked.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Click
+            me</button>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Outline</h1>
+          <p>Use the following button styles to show the colors only for the border of the element.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Primary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Secondary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-green-500 text-green-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Success</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Danger</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-yellow-500 text-yellow-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Warning</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-blue-400 text-blue-400 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Info</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-gray-200 text-gray-200 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Light</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-gray-800 text-gray-800 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Dark</button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Rounded</h1>
+          <p>Use elements rounded corners with the .rounded-full property.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Primary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Secondary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out">Success</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Danger</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out">Warning</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-400 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-500 hover:shadow-lg focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out">Info</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-gray-200 text-gray-700 font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out">Light</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Dark</button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Rounded Outline</h1>
+          <p>Use the border styles with .rounded-full class.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Primary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Secondary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-green-500 text-green-500 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Success</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Danger</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-yellow-500 text-yellow-500 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Warning</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-blue-400 text-blue-400 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Info</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-gray-200 text-gray-200 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Light</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2 border-2 border-gray-800 text-gray-800 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Dark</button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Floating</h1>
+          <p>Use floating action button that represents the primary action in an application. It's button that appears in
+            front of all screen content, typically as a circular shape with an icon in its center.
+          </p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block rounded-full bg-blue-600 text-white leading-normal uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-9 h-9">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" class="w-3 mx-auto"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Sizes</h1>
+          <p>Use these examples if you want to use smaller or larger buttons.</p>
+        </div>
+        <div class="flex spac-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+            <button type="button"
+              class="inline-block m-1 px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Active States</h1>
+          <p>Choose from several predefined button styles, each serving its own semantic purpose, with a few extras thrown
+            in for more control.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Primary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-purple-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Secondary</button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Disabled State</h1>
+          <p>Use the following styles to indicate a disabled button. This can be often used inside form elements to
+            disable the submit button before all the form elements have been completed and validated.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-60"
+              disabled>Primary</button>
+            <button type="button"
+              class="inline-block m-1 px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md focus:outline-none focus:ring-0 transition duration-150 ease-in-out pointer-events-none opacity-60"
+              disabled>Secondary</button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">With Icons</h1>
+          <p>Use the icon inside the button to more clearly indicate the action.</p>
+        </div>
+        <div class="flex space-x-2 justify-center">
+          <div>
+            <button type="button"
+              class="inline-block px-6 pt-2.5 pb-2 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex align-center">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" class="w-3 mr-2" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+                </path>
+              </svg>
+              Button
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <div>
+           <h1 class="leading-tight mt-4 font-medium text-l mt-0 mb-2">Block Buttons</h1>
+          <p>Use full width button to adjust it to the column width. Block buttons is more often used when creating layout
+            for mobile devices.</p>
+        </div>
+        <button type="button"
+          class="mb-2 w-full inline-block m-1 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+        <button type="button"
+          class="w-full inline-block m-1 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-normal uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
           Button
         </button>
-        <app-code-highlighter-widget
-          [code]="thirdBtn.outerHTML"
-        ></app-code-highlighter-widget>
-      </ng-template>
-    </ng-container>
+      </div>
+      </div>
   </div>
 </div>
