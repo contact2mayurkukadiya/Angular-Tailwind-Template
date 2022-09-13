@@ -1,0 +1,59 @@
+<div
+  class="rounded overflow-hidden shadow-lg hover:shadow-[#00000082] dark:hover:shadow-black shadow-[#00000047] dark:shadow-[#0000008c] bg-white dark:bg-slate-800 m-4 min-w-full min-h-full"
+>
+  <div class="px-6 py-4">
+    <div>
+      <h4 class="font-medium leading-tight text-2xl mt-0 mb-2">Buttons</h4>
+      <p>{{ description }}</p>
+    </div>
+    <ng-container *ngFor="let button of data">
+      <div class="font-bold text-xl mb-2 dark:text-white">
+        {{ button.btn_title }}
+      </div>
+      <ng-container *ngIf="button.icon; else second">
+        <button
+          #firstBtn
+          class="{{
+            button.use_css ? button.external_class : button.tailwind_class
+          }}"
+        >
+          <svg
+            class="fill-current w-4 h-4 mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+          </svg>
+          <span>Download</span>
+        </button>
+        <app-code-highlighter-widget
+          [code]="button.code"
+        ></app-code-highlighter-widget>
+      </ng-container>
+      <ng-template #second>
+        <ng-container *ngIf="button.id == 'btnGrouped'; else third">
+          <div #secondBtn>
+            <button class="{{ button.tailwind_class }} rounded-l">Prev</button>
+            <button class="{{ button.tailwind_class }} rounded-r">Next</button>
+          </div>
+          <app-code-highlighter-widget
+            [code]="secondBtn.outerHTML"
+          ></app-code-highlighter-widget>
+        </ng-container>
+      </ng-template>
+      <ng-template #third>
+        <button
+          #thirdBtn
+          class="{{
+            button.use_css ? button.external_class : button.tailwind_class
+          }}"
+        >
+          Button
+        </button>
+        <app-code-highlighter-widget
+          [code]="thirdBtn.outerHTML"
+        ></app-code-highlighter-widget>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>
