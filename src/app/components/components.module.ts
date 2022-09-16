@@ -12,6 +12,9 @@ import { IndexBreadcrumbComponent } from './breadcrumbs/index-breadcrumb/index-b
 import { AccordianComponent } from './accordian/accordian.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { SharedModule } from '../shared/shared/shared.module';
+import Alpine from 'alpinejs'
+ 
+Alpine.start()
 @NgModule({
   declarations: [
     IndexNavbarComponent,

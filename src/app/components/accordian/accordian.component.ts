@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accordian.component.scss']
 })
 export class AccordianComponent implements OnInit {
-
+  open :any = false;
   constructor() { }
 
   ngOnInit(): void {
