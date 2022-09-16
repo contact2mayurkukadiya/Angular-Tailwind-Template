@@ -11,6 +11,7 @@ import { ButtonComponent } from './button/button.component';
 import { IndexBreadcrumbComponent } from './breadcrumbs/index-breadcrumb/index-breadcrumb.component';
 import { AccordianComponent } from './accordian/accordian.component';
 import { HighlightModule } from 'ngx-highlightjs';
+import { SharedModule } from '../shared/shared/shared.module';
 @NgModule({
   declarations: [
     IndexNavbarComponent,
@@ -26,6 +27,7 @@ import { HighlightModule } from 'ngx-highlightjs';
     ComponentsRoutingModule,
     WidgetsModule,
     HighlightModule,
+    SharedModule
   ],
   exports: [
     IndexNavbarComponent,

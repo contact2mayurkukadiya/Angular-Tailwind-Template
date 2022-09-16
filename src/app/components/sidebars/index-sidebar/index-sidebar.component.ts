@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-index-sidebar',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index-sidebar.component.scss']
 })
 export class IndexSidebarComponent implements OnInit {
-
+  home = faHome;
   constructor() { }
 
   ngOnInit(): void {

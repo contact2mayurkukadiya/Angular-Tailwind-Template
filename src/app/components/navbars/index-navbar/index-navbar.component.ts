@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-index-navbar',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index-navbar.component.scss']
 })
 export class IndexNavbarComponent implements OnInit {
-
+  bell = faBell;
   constructor() { }
 
   ngOnInit(): void {
