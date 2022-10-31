@@ -1,19 +1,16 @@
-<div class="accordion" id="{{data.id}}">
+<div class="accordion" id="{{data?.id}}">
     <div class="accordion-item bg-white border border-gray-200">
-        <h2 class="accordion-header mb-0" id="{{data.id}}">
-            <button class="" [ngClass]="data.buttonClass" type="button" data-bs-toggle="collapse"
+        <h2 class="accordion-header mb-0" id="{{data?.id}}">
+            <button class="" [ngClass]="data?.buttonClass" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" type="button"
                 data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
                 aria-controls="flush-collapseOne" (click)="toggle()">
-                {{data.buttonTitle}}
+                {{data?.buttonTitle}}
             </button>
         </h2>
-        <div id="{{data.divID}}" *ngIf="show" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        <div id="{{data?.divID}}" *ngIf="show" class="accordion-collapse collapse show" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
-            <div class="card-title-text accordion-body py-4 px-5">
-                <strong>{{data.strongText}}</strong>
-                {{data.normalText}} <code>{{data.codeText}}</code>
-            </div>
+            <ng-content></ng-content>
         </div>
     </div>
 </div>
