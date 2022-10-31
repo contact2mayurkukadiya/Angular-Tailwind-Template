@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccordianComponent } from './accordian/accordian.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ButtonComponent } from './button/button.component';
 import { ChartComponent } from './chart/chart.component';
 import { ComponentComponent } from './component.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'charts',
     component: ChartComponent,
+  },
+  {
+    path: 'breadcrumbs',
+    component: BreadcrumbComponent,
   },
 ];
 
