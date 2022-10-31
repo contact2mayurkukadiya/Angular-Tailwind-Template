@@ -9,7 +9,7 @@
                 clip-rule="evenodd"></path>
         </svg> -->
         <fa-icon [icon]="menuItem.icon"></fa-icon>
-        <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item="">{{menuItem.item}}</span>
+        <span class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass" sidebar-toggle-item="">{{menuItem.item}}</span>
         <!--   <svg sidebar-toggle-item="" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"

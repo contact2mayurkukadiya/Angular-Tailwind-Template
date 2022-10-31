@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { faHome,faList } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHome,
+  faList,
+  faTableColumns,
+  faFileWaveform,
+  faGripHorizontal,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-index-sidebar',
@@ -11,11 +17,21 @@ export class IndexSidebarComponent implements OnInit {
   menu: any = [
     {
       id: 'dditem1',
+      item: 'Dashboard',
+      icon: faHome,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+    },
+    {
+      id: 'dditem2',
       item: 'Components',
-      icon : faList,
+      icon: faGripHorizontal,
       class:
         'flex items-center p-2 w-full transition duration-75 group text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
       menuSubItem: [
         {
           route: 'components/accordian',
@@ -43,7 +59,36 @@ export class IndexSidebarComponent implements OnInit {
         },
       ],
     },
+    {
+      id: 'dditem3',
+      item: 'Widgets',
+      icon: faList,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+    },
   ];
+  menu2: any = [
+    {
+      id: 'dditem12',
+      item: 'Forms',
+      icon: faFileWaveform,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+    },
+  ];
+  /* {
+    id: 'dditem11',
+    item: 'Components',
+    icon : faTableColumns,
+    class:
+      'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+    ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+    fontClass: 'text-sm'
+  }, */
   constructor() {}
 
   ngOnInit(): void {}
