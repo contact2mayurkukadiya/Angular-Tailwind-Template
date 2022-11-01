@@ -37,25 +37,25 @@ export class IndexSidebarComponent implements OnInit {
           route: 'components/accordian',
           name: 'Acoordion',
           subItemClass:
-            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
           route: 'components/breadcrumbs',
           name: 'Breadcrumbs',
           subItemClass:
-            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
           route: 'components/buttons',
           name: 'Buttons',
           subItemClass:
-            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
           route: 'components/charts',
           name: 'Charts',
           subItemClass:
-            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
       ],
     },
@@ -72,12 +72,26 @@ export class IndexSidebarComponent implements OnInit {
   menu2: any = [
     {
       id: 'dditem12',
-      item: 'Forms',
+      item: 'Form Components',
       icon: faFileWaveform,
       class:
         'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
       fontClass: 'text-sm',
+      menuSubItem: [
+        {
+          route: 'components/basic-form',
+          name: 'Basic Elements',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          route: 'components/advance-form',
+          name: 'Advanced Elements',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+      ],
     },
   ];
   /* {

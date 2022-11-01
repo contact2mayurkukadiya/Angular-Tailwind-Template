@@ -5,6 +5,8 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ButtonComponent } from './button/button.component';
 import { ChartComponent } from './chart/chart.component';
 import { ComponentComponent } from './component.component';
+import { AdvancedFormComponent } from './forms/advanced-form/advanced-form.component';
+import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { IndexNavbarComponent } from './navbars/index-navbar/index-navbar.component';
 
 const routes: Routes = [
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'breadcrumbs',
     component: BreadcrumbComponent,
+  },
+  {
+    path: 'basic-form',
+    component: BasicFormComponent,
+  },
+  {
+    path: 'advance-form',
+    component: AdvancedFormComponent,
   },
 ];
 

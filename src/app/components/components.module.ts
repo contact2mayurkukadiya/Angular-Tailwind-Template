@@ -13,7 +13,9 @@ import { AccordianComponent } from './accordian/accordian.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { SharedModule } from '../shared/shared/shared.module';
 import Alpine from 'alpinejs';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component'
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { BasicFormComponent } from './forms/basic-form/basic-form.component';
+import { AdvancedFormComponent } from './forms/advanced-form/advanced-form.component'
  
 Alpine.start()
 @NgModule({
@@ -26,6 +28,8 @@ Alpine.start()
     IndexBreadcrumbComponent,
     AccordianComponent,
     BreadcrumbComponent,
+    BasicFormComponent,
+    AdvancedFormComponent,
   ],
   imports: [
     CommonModule,

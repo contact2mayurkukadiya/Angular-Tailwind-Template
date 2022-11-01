@@ -14,20 +14,18 @@
   </div> -->
 
 <!-- <div class="mt-4"> -->
-  <!-- <h6 class="text-2xl mb-2 font-medium">Example</h6> -->
-  <div class="grid grid-cols-2 gap-2 mt-4">
-    <ng-container *ngFor="let item of data">
-      <div class="white-card">
-        <div>
-          <h1 class="card-title-text mt-0 mb-2">{{ item.title }}</h1>
-          <span class="description-text">Line graphs show how a continuous variable changes over time, for example, get
-            trends in sales or profit
-            margins each month, quarter, or year.</span>
-          <app-chart-widget [config]="item"></app-chart-widget>
-        </div>
-      </div>
-    </ng-container>
-  </div>
+<!-- <h6 class="text-2xl mb-2 font-medium">Example</h6> -->
+<div class="grid grid-cols-2 gap-2 mt-4">
+  <ng-container *ngFor="let item of data">
+    <div class="white-card">
+      <h1 class="card-title-text mt-0 mb-2">{{ item.title }}</h1>
+      <span class="description-text">Line graphs show how a continuous variable changes over time, for example, get
+        trends in sales or profit
+        margins each month, quarter, or year.</span>
+      <app-chart-widget [config]="item"></app-chart-widget>
+    </div>
+  </ng-container>
+</div>
 <!-- </div> -->
 
 <!-- <div class="mt-4">
