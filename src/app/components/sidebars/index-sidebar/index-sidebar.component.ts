@@ -75,6 +75,24 @@ export class IndexSidebarComponent implements OnInit {
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
+        {
+          route: 'components/progress-bar',
+          name: 'Progress Bar',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          route: 'components/popover',
+          name: 'Popover',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          route: 'components/card',
+          name: 'Card',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
       ],
     },
     {
@@ -98,14 +116,20 @@ export class IndexSidebarComponent implements OnInit {
       fontClass: 'text-sm',
       menuSubItem: [
         {
-          route: 'components/basic-form',
-          name: 'Basic Elements',
+          route: 'form/input-field',
+          name: 'Input Fields',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
-          route: 'components/advance-form',
-          name: 'Advanced Elements',
+          route: 'form/file-input',
+          name: 'File Input',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          route: 'form/search-input',
+          name: 'Search Input',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },

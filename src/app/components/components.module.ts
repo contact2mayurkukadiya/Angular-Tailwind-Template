@@ -18,7 +18,10 @@ import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { AdvancedFormComponent } from './forms/advanced-form/advanced-form.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
-import { BadgeComponent } from './badge/badge.component'
+import { BadgeComponent } from './badge/badge.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { PopoverComponent } from './popover/popover.component';
+import { CardComponent } from './card/card.component';
  
 Alpine.start()
 @NgModule({
@@ -36,6 +39,9 @@ Alpine.start()
     AlertsComponent,
     TooltipComponent,
     BadgeComponent,
+    ProgressBarComponent,
+    PopoverComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

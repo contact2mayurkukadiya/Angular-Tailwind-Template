@@ -6,11 +6,14 @@ import { AlertsComponent } from './alerts/alerts.component';
 import { BadgeComponent } from './badge/badge.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ButtonComponent } from './button/button.component';
+import { CardComponent } from './card/card.component';
 import { ChartComponent } from './chart/chart.component';
 import { ComponentComponent } from './component.component';
 import { AdvancedFormComponent } from './forms/advanced-form/advanced-form.component';
 import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { IndexNavbarComponent } from './navbars/index-navbar/index-navbar.component';
+import { PopoverComponent } from './popover/popover.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 
 const routes: Routes = [
@@ -57,6 +60,22 @@ const routes: Routes = [
   {
     path: 'badge',
     component: BadgeComponent,
+  },
+  {
+    path: 'progress-bar',
+    component: ProgressBarComponent,
+  },
+  {
+    path: 'popover',
+    component: PopoverComponent,
+  },
+  {
+    path: 'card',
+    component: CardComponent,
+  },
+  {
+    path: 'form',
+    component: CardComponent,
   },
 ];
 
