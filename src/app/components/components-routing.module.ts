@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Tooltip } from 'chart.js';
 import { AccordianComponent } from './accordian/accordian.component';
+import { AlertsComponent } from './alerts/alerts.component';
+import { BadgeComponent } from './badge/badge.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ButtonComponent } from './button/button.component';
 import { ChartComponent } from './chart/chart.component';
@@ -8,6 +11,7 @@ import { ComponentComponent } from './component.component';
 import { AdvancedFormComponent } from './forms/advanced-form/advanced-form.component';
 import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { IndexNavbarComponent } from './navbars/index-navbar/index-navbar.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 const routes: Routes = [
   {
@@ -41,6 +45,18 @@ const routes: Routes = [
   {
     path: 'advance-form',
     component: AdvancedFormComponent,
+  },
+  {
+    path: 'alert',
+    component: AlertsComponent,
+  },
+  {
+    path: 'tooltip',
+    component: TooltipComponent,
+  },
+  {
+    path: 'badge',
+    component: BadgeComponent,
   },
 ];
 

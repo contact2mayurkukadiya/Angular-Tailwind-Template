@@ -1,0 +1,183 @@
+<div class="white-card">
+    <div class="flex">
+        <div>
+            <i class="icofont icofont-chart-bar-graph bg-c-blue"></i>
+        </div>
+        <h6 class="mt-0 mb-2 page-title-text">Tooltip</h6>
+    </div>
+</div>
+
+<div class="white-card mt-4">
+    <h1 class="card-title-text mt-0 mb-2">Default tooltip</h1>
+    <span class="description-text">Input elements such as checkboxes, radios, textarea, text inputs to collect
+        information from users.</span>
+    <div class="m-4">
+        <button data-tooltip-target="tooltip-default" type="button"
+            class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default
+            tooltip</button>
+        <div id="tooltip-default" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip content
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+    </div>
+</div>
+
+<div class="white-card mt-4">
+    <h1 class="card-title-text mt-0 mb-2">Tooltip styles</h1>
+    <span class="description-text">Input elements such as checkboxes, radios, textarea, text inputs to collect
+        information from users.</span>
+    <div class="m-4">
+        <!-- Light style tooltip -->
+        <button data-tooltip-target="tooltip-light" data-tooltip-style="light" type="button"
+            class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Light
+            tooltip</button>
+        <div id="tooltip-light" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 tooltip"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip content
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+        <!-- Dark style tooltip -->
+        <button data-tooltip-target="tooltip-dark" type="button"
+            class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Dark
+            tooltip</button>
+        <div id="tooltip-dark" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip content
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+    </div>
+</div>
+
+<div class="white-card mt-4">
+    <h1 class="card-title-text mt-0 mb-2">Placement </h1>
+    <span class="description-text">Input elements such as checkboxes, radios, textarea, text inputs to collect
+        information from users.</span>
+    <div class="m-4">
+        <!-- Show tooltip on top -->
+        <button data-tooltip-target="tooltip-top" data-tooltip-placement="top" type="button"
+            class="mb-2 ml-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip
+            top</button>
+        <div id="tooltip-top" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip on top
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+        <!-- Show tooltip on right -->
+        <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button"
+            class="mb-2 ml-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip
+            right</button>
+        <div id="tooltip-right" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="right"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(8.32px, 0px, 0px);">
+            Tooltip on right
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+        <!-- Show tooltip on bottom -->
+        <button data-tooltip-target="tooltip-bottom" data-tooltip-placement="bottom" type="button"
+            class="mb-2 ml-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip
+            bottom</button>
+        <div id="tooltip-bottom" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip on bottom
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+        <!-- Show tooltip on left -->
+        <button data-tooltip-target="tooltip-left" data-tooltip-placement="left" type="button"
+            class="mb-2 ml-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip
+            left</button>
+        <div id="tooltip-left" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="right"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(8.32px, 0px, 0px);">
+            Tooltip on left
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; top: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+    </div>
+</div>
+
+<div class="white-card mt-4">
+    <h1 class="card-title-text mt-0 mb-2">Triggering </h1>
+    <span class="description-text">Input elements such as checkboxes, radios, textarea, text inputs to collect
+        information from users.</span>
+    <div class="m-4">
+        <!-- Show tooltip on hover -->
+        <button data-tooltip-target="tooltip-hover" data-tooltip-trigger="hover" type="button"
+            class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip
+            hover</button>
+        <div id="tooltip-hover" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip content
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+        <!-- Show tooltip on click -->
+        <button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="button"
+            class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip
+            click</button>
+        <div id="tooltip-click" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip content
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+    </div>
+</div>
+
+<div class="white-card mt-4">
+    <h1 class="card-title-text mt-0 mb-2">Animation</h1>
+    <span class="description-text">Input elements such as checkboxes, radios, textarea, text inputs to collect
+        information from users.</span>
+    <div class="m-4">
+        <button data-tooltip-target="tooltip-animation" type="button"
+            class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Animated
+            tooltip</button>
+        <div id="tooltip-animation" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip content
+            <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+    </div>
+</div>
+
+<div class="white-card mt-4">
+    <h1 class="card-title-text mt-0 mb-2">Disable arrow</h1>
+    <span class="description-text">Input elements such as checkboxes, radios, textarea, text inputs to collect
+        information from users.</span>
+    <div class="m-4">
+        <button data-tooltip-target="tooltip-no-arrow" type="button"
+            class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default
+            tooltip</button>
+        <div id="tooltip-no-arrow" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 8.32px, 0px);">
+            Tooltip content
+        </div>
+    </div>
+</div>

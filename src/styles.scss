@@ -24,3 +24,23 @@
 .card-title-text {
   @apply text-sm text-[#505458] font-semibold;
 }
+
+.default {
+  background-color: rgb(145, 154, 163);
+}
+
+.warning {
+  background-color: rgb(255, 182, 77);
+}
+
+.danger {
+  background-color: rgb(252, 97, 128);
+}
+
+.success {
+  background-color: rgb(147, 190, 82);
+}
+
+.info {
+  background-color: rgb(98, 209, 243);
+}
