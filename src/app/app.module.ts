@@ -12,6 +12,7 @@ import {
 } from 'ngx-highlightjs';
 import { HighlightPlusModule } from 'ngx-highlightjs/plus';
 import { SharedModule } from './shared/shared/shared.module';
+import 'flowbite';
 
 @NgModule({
   declarations: [AppComponent],

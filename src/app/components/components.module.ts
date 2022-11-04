@@ -14,8 +14,6 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { SharedModule } from '../shared/shared/shared.module';
 import Alpine from 'alpinejs';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { BasicFormComponent } from './forms/basic-form/basic-form.component';
-import { AdvancedFormComponent } from './forms/advanced-form/advanced-form.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { BadgeComponent } from './badge/badge.component';
@@ -34,8 +32,6 @@ Alpine.start()
     IndexBreadcrumbComponent,
     AccordianComponent,
     BreadcrumbComponent,
-    BasicFormComponent,
-    AdvancedFormComponent,
     AlertsComponent,
     TooltipComponent,
     BadgeComponent,

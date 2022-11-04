@@ -9,8 +9,6 @@ import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
 import { ChartComponent } from './chart/chart.component';
 import { ComponentComponent } from './component.component';
-import { AdvancedFormComponent } from './forms/advanced-form/advanced-form.component';
-import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { IndexNavbarComponent } from './navbars/index-navbar/index-navbar.component';
 import { PopoverComponent } from './popover/popover.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
@@ -40,14 +38,6 @@ const routes: Routes = [
   {
     path: 'breadcrumbs',
     component: BreadcrumbComponent,
-  },
-  {
-    path: 'basic-form',
-    component: BasicFormComponent,
-  },
-  {
-    path: 'advance-form',
-    component: AdvancedFormComponent,
   },
   {
     path: 'alert',

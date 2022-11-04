@@ -24,6 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "alpinejs": "^3.10.3",
     "chart.js": "^3.9.1",
+    "flowbite": "^1.5.3",
     "ngx-clipboard": "^15.1.0",
     "ngx-highlightjs": "^7.0.1",
     "rxjs": "~7.5.0",
