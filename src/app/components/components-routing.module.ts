@@ -7,8 +7,11 @@ import { BadgeComponent } from './badge/badge.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
 import { ChartComponent } from './chart/chart.component';
 import { ComponentComponent } from './component.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { ListComponent } from './list/list.component';
 import { IndexNavbarComponent } from './navbars/index-navbar/index-navbar.component';
 import { PopoverComponent } from './popover/popover.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
@@ -66,6 +69,18 @@ const routes: Routes = [
   {
     path: 'form',
     component: CardComponent,
+  },
+  {
+    path: 'carousel',
+    component: CarouselComponent,
+  },
+  {
+    path: 'dropdown',
+    component: DropdownComponent,
+  },
+  {
+    path: 'list',
+    component: ListComponent,
   },
 ];
 

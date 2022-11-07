@@ -8,20 +8,61 @@ import { Component, OnInit } from '@angular/core';
 export class BreadcrumbComponent implements OnInit {
   data: any = [
     {
-      class : 'flex',
-      tab_1_title : 'Home',
-      tab_2_title : 'Components',
-      tab_3_title : 'Buttons',
-      title : 'Basic Breadcrumb'
+      class: 'flex',
+      routes: [
+        {
+          id: 0,
+          title: 'Home',
+          active: false,
+          index: 0,
+          route: '/',
+        },
+        {
+          id: 1,
+          title: 'Components',
+          active: false,
+          index: 1,
+          route: 'components',
+        },
+        {
+          id: 2,
+          title: 'Buttons',
+          active: true,
+          index: 2,
+          route: 'components/buttons',
+        },
+      ],
+      title: 'Basic Breadcrumb',
     },
     {
-      class : 'flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700" aria-label="Breadcrumb',
-      tab_1_title : 'Home',
-      tab_2_title : 'Components',
-      tab_3_title : 'Buttons',
-      title : 'Solid Breadcrumb'
-    }
-  ]
+      class:
+        'flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700" aria-label="Breadcrumb',
+      routes: [
+        {
+          id: 0,
+          title: 'Home',
+          active: false,
+          index: 0,
+          route: '/',
+        },
+        {
+          id: 1,
+          title: 'Components',
+          active: false,
+          index: 1,
+          route: 'components',
+        },
+        {
+          id: 2,
+          title: 'Buttons',
+          active: true,
+          index: 2,
+          route: 'components/buttons',
+        },
+      ],
+      title: 'Solid Breadcrumb',
+    },
+  ];
 
   constructor() {}
 

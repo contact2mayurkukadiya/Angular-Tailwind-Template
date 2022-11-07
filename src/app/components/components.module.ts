@@ -20,6 +20,9 @@ import { BadgeComponent } from './badge/badge.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { PopoverComponent } from './popover/popover.component';
 import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { ListComponent } from './list/list.component';
  
 Alpine.start()
 @NgModule({
@@ -37,7 +40,10 @@ Alpine.start()
     BadgeComponent,
     ProgressBarComponent,
     PopoverComponent,
-    CardComponent
+    CardComponent,
+    CarouselComponent,
+    DropdownComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,

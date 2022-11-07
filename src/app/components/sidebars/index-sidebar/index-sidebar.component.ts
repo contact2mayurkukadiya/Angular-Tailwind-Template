@@ -25,6 +25,17 @@ export class IndexSidebarComponent implements OnInit {
       fontClass: 'text-sm',
     },
     {
+      id: 'dditem3',
+      item: 'Widgets',
+      icon: faList,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+    },
+  ];
+  menu2: any = [
+    {
       id: 'dditem2',
       item: 'Components',
       icon: faGripHorizontal,
@@ -36,6 +47,18 @@ export class IndexSidebarComponent implements OnInit {
         {
           route: 'components/accordian',
           name: 'Acoordion',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          route: 'components/alert',
+          name: 'Alerts',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          route: 'components/badge',
+          name: 'Badge',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
@@ -52,26 +75,32 @@ export class IndexSidebarComponent implements OnInit {
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          route: 'components/card',
+          name: 'Card',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          route: 'components/carousel',
+          name: 'Carousel',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
           route: 'components/charts',
           name: 'Charts',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
-          route: 'components/alert',
-          name: 'Alerts',
+          route: 'components/dropdown',
+          name: 'Dropdown',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
-          route: 'components/tooltip',
-          name: 'Tooltip',
-          subItemClass:
-            'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
-        },
-        {
-          route: 'components/badge',
-          name: 'Badge',
+          route: 'components/list',
+          name: 'List',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
@@ -88,24 +117,15 @@ export class IndexSidebarComponent implements OnInit {
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
-          route: 'components/card',
-          name: 'Card',
+          route: 'components/tooltip',
+          name: 'Tooltip',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
       ],
     },
-    {
-      id: 'dditem3',
-      item: 'Widgets',
-      icon: faList,
-      class:
-        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
-      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
-      fontClass: 'text-sm',
-    },
   ];
-  menu2: any = [
+  menu3: any = [
     {
       id: 'dditem12',
       item: 'Form Components',
@@ -178,15 +198,6 @@ export class IndexSidebarComponent implements OnInit {
       ],
     },
   ];
-  /* {
-    id: 'dditem11',
-    item: 'Components',
-    icon : faTableColumns,
-    class:
-      'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
-    ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
-    fontClass: 'text-sm'
-  }, */
   constructor() {}
 
   ngOnInit(): void {}
