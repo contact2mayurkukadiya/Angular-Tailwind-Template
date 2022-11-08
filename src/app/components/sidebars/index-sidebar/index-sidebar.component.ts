@@ -5,6 +5,9 @@ import {
   faTableColumns,
   faFileWaveform,
   faGripHorizontal,
+  faCode,
+  faHatWizard,
+  faListSquares,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -23,6 +26,7 @@ export class IndexSidebarComponent implements OnInit {
         'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
       fontClass: 'text-sm',
+      route: '/',
     },
     {
       id: 'dditem3',
@@ -32,6 +36,7 @@ export class IndexSidebarComponent implements OnInit {
         'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
       fontClass: 'text-sm',
+      route: '/',
     },
   ];
   menu2: any = [
@@ -196,6 +201,56 @@ export class IndexSidebarComponent implements OnInit {
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
       ],
+    },
+    {
+      id: 'dditem13',
+      item: 'Form Picker',
+      icon: faTableColumns,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+      route: 'form/picker',
+    },
+    {
+      id: 'dditem13',
+      item: 'Form Select',
+      icon: faTableColumns,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+      route: 'form/select',
+    },
+    {
+      id: 'dditem13',
+      item: 'Form Making',
+      icon: faCode,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+      route: 'form/making',
+    },
+    {
+      id: 'dditem13',
+      item: 'Form Wizard',
+      icon: faHatWizard,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+      route: 'form/wizard',
+    },
+    {
+      id: 'dditem13',
+      item: 'Form ready to use',
+      icon: faTableColumns,
+      class:
+        'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+      route: 'form/ready',
     },
   ];
   constructor() {}

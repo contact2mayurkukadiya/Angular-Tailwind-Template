@@ -1,8 +1,10 @@
 <ng-container *ngFor="let menuItem of menu">
     <button type="button" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example" id="{{menuItem.id}}"
-        data-bs-toggle="dropdown" aria-expanded="false" (click)="menuItem.menuSubItem && toggle()" [ngClass]="menuItem.class">
+        data-bs-toggle="dropdown" aria-expanded="false"
+        (click)="menuItem.menuSubItem ? toggle() : redirect(menuItem.route)" [ngClass]="menuItem.class">
         <fa-icon *ngIf="menuItem?.icon" [icon]="menuItem?.icon"></fa-icon>
-        <span class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass" sidebar-toggle-item="">{{menuItem.item}}</span>
+        <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass"
+            sidebar-toggle-item="">{{menuItem.item}}</a>
     </button>
     <ul *ngIf="Show" aria-labelledby="dropdownMenuButton1" [ngClass]="menuItem.ulClass">
         <li *ngFor="let item of menuItem.menuSubItem">

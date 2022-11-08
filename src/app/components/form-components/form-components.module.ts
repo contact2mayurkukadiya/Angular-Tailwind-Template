@@ -12,9 +12,13 @@ import { RadioComponent } from './radio/radio.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { RangeComponent } from './range/range.component';
 import { FloatingLabelComponent } from './floating-label/floating-label.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { FormMakingComponent } from './form-making/form-making.component';
+import { FormWizardComponent } from './form-wizard/form-wizard.component';
+import { FormReadyToUseComponent } from './form-ready-to-use/form-ready-to-use.component';
 
 @NgModule({
-  declarations: [InputFieldComponent, FileInputComponent, SearchInputComponent, SelectComponent, TextareaComponent, CheckboxComponent, RadioComponent, ToggleComponent, RangeComponent, FloatingLabelComponent],
+  declarations: [InputFieldComponent, FileInputComponent, SearchInputComponent, SelectComponent, TextareaComponent, CheckboxComponent, RadioComponent, ToggleComponent, RangeComponent, FloatingLabelComponent, DatepickerComponent, FormMakingComponent, FormWizardComponent, FormReadyToUseComponent],
   imports: [CommonModule, FormComponentsRoutingModule],
 })
 export class FormComponentsModule {}

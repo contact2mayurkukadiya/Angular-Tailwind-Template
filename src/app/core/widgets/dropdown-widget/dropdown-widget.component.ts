@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dropdown-widget',
@@ -8,11 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DropdownWidgetComponent implements OnInit {
   Show: boolean = false;
   @Input() menu: any;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   toggle() {
     this.Show = !this.Show;
+  }
+
+  redirect(route) {
+    this.router.navigate([route]);
   }
 }

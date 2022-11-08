@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["./src/**/*.{html,ts}", "./node_modules/flowbite/**/*.js"],
+  content: ["./src/**/*.{html,ts}", "./node_modules/flowbite/**/*.js", "./node_modules/flowbite-datepicker/dist/js/datepicker.js"],
   theme: {
     extend: {
       "#0000008c": "#0000008c",
