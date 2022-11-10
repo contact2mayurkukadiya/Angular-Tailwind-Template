@@ -224,13 +224,13 @@ export class IndexSidebarComponent implements OnInit {
     },
     {
       id: 'dditem13',
-      item: 'Form Making',
+      item: 'Form Masking',
       icon: faCode,
       class:
         'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
       fontClass: 'text-sm',
-      route: 'form/making',
+      route: 'form/masking',
     },
     {
       id: 'dditem13',

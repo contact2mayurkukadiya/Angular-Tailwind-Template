@@ -4,7 +4,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { FileInputComponent } from './file-input/file-input.component';
 import { FloatingLabelComponent } from './floating-label/floating-label.component';
-import { FormMakingComponent } from './form-making/form-making.component';
+import { FormMaskingComponent } from './form-masking/form-masking.component';
 import { FormReadyToUseComponent } from './form-ready-to-use/form-ready-to-use.component';
 import { FormWizardComponent } from './form-wizard/form-wizard.component';
 import { InputFieldComponent } from './input-field/input-field.component';
@@ -61,8 +61,8 @@ const routes: Routes = [
     component: DatepickerComponent,
   },
   {
-    path: 'making',
-    component: FormMakingComponent,
+    path: 'masking',
+    component: FormMaskingComponent,
   },
   {
     path: 'wizard',
@@ -76,6 +76,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class FormComponentsRoutingModule { }
+export class FormComponentsRoutingModule {}

@@ -1,0 +1,22 @@
+<div class="white-card">
+    <div class="flex">
+        <div>
+            <i class="icofont icofont-chart-bar-graph bg-c-blue"></i>
+        </div>
+        <h6 class="mt-0 mb-2 page-title-text">Form Masking</h6>
+    </div>
+    <span class="description-text">Use these default button styles with multiple colors to indicate an action or link
+        within your website.</span>
+</div>
+
+<div class="white-card mt-4">
+    <h1 class="card-title-text mt-0 mb-2">Phone Number</h1>
+    <span class="description-text">Use these default button styles with multiple colors to indicate an action or link
+        within your website.</span>
+    <form [formGroup]="form">
+        <div class="form-group">
+            <label for="phone-number">Mobile Number</label>
+            <input class="form-control" type="text" appPhoneMask formControlName="phone" id="phone-number">
+        </div>
+    </form>
+</div>

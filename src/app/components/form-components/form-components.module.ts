@@ -13,12 +13,13 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { RangeComponent } from './range/range.component';
 import { FloatingLabelComponent } from './floating-label/floating-label.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
-import { FormMakingComponent } from './form-making/form-making.component';
 import { FormWizardComponent } from './form-wizard/form-wizard.component';
 import { FormReadyToUseComponent } from './form-ready-to-use/form-ready-to-use.component';
+import { FormMaskingComponent } from './form-masking/form-masking.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [InputFieldComponent, FileInputComponent, SearchInputComponent, SelectComponent, TextareaComponent, CheckboxComponent, RadioComponent, ToggleComponent, RangeComponent, FloatingLabelComponent, DatepickerComponent, FormMakingComponent, FormWizardComponent, FormReadyToUseComponent],
-  imports: [CommonModule, FormComponentsRoutingModule],
+  declarations: [InputFieldComponent, FileInputComponent, SearchInputComponent, SelectComponent, TextareaComponent, CheckboxComponent, RadioComponent, ToggleComponent, RangeComponent, FloatingLabelComponent, DatepickerComponent, FormWizardComponent, FormReadyToUseComponent, FormMaskingComponent],
+  imports: [CommonModule, FormComponentsRoutingModule, FormsModule, ReactiveFormsModule],
 })
 export class FormComponentsModule {}

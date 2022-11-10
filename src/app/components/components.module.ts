@@ -23,8 +23,10 @@ import { CardComponent } from './card/card.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { ListComponent } from './list/list.component';
- 
-Alpine.start()
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+Alpine.start();
 @NgModule({
   declarations: [
     IndexNavbarComponent,
@@ -43,14 +45,16 @@ Alpine.start()
     CardComponent,
     CarouselComponent,
     DropdownComponent,
-    ListComponent
+    ListComponent,
   ],
   imports: [
     CommonModule,
     ComponentsRoutingModule,
     WidgetsModule,
     HighlightModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     IndexNavbarComponent,
