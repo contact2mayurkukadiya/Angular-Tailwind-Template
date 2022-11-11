@@ -17,9 +17,31 @@ import { FormWizardComponent } from './form-wizard/form-wizard.component';
 import { FormReadyToUseComponent } from './form-ready-to-use/form-ready-to-use.component';
 import { FormMaskingComponent } from './form-masking/form-masking.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared/shared.module';
 
 @NgModule({
-  declarations: [InputFieldComponent, FileInputComponent, SearchInputComponent, SelectComponent, TextareaComponent, CheckboxComponent, RadioComponent, ToggleComponent, RangeComponent, FloatingLabelComponent, DatepickerComponent, FormWizardComponent, FormReadyToUseComponent, FormMaskingComponent],
-  imports: [CommonModule, FormComponentsRoutingModule, FormsModule, ReactiveFormsModule],
+  declarations: [
+    InputFieldComponent,
+    FileInputComponent,
+    SearchInputComponent,
+    SelectComponent,
+    TextareaComponent,
+    CheckboxComponent,
+    RadioComponent,
+    ToggleComponent,
+    RangeComponent,
+    FloatingLabelComponent,
+    DatepickerComponent,
+    FormWizardComponent,
+    FormReadyToUseComponent,
+    FormMaskingComponent,
+  ],
+  imports: [
+    CommonModule,
+    FormComponentsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule,
+  ],
 })
 export class FormComponentsModule {}

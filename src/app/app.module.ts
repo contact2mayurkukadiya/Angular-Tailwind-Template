@@ -13,6 +13,9 @@ import {
 import { HighlightPlusModule } from 'ngx-highlightjs/plus';
 import { SharedModule } from './shared/shared/shared.module';
 import 'flowbite';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +26,7 @@ import 'flowbite';
     HighlightModule,
     HighlightPlusModule,
     SharedModule,
+    NgxMaskModule.forRoot({ validation: true }),
   ],
   exports: [],
   providers: [
@@ -36,7 +40,7 @@ import 'flowbite';
         languages: {
           typescript: () => import('highlight.js/lib/languages/typescript'),
           css: () => import('highlight.js/lib/languages/css'),
-          xml: () => import('highlight.js/lib/languages/xml')
+          xml: () => import('highlight.js/lib/languages/xml'),
         },
       },
     },

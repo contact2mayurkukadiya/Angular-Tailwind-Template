@@ -14,6 +14,7 @@ import {
 })
 export class FormMaskingComponent implements OnInit {
   form: FormGroup;
+  phoneMask = '(000) 000 00 00';
 
   constructor( private fb: FormBuilder) {}
 

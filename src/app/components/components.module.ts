@@ -54,7 +54,7 @@ Alpine.start();
     HighlightModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     IndexNavbarComponent,

@@ -16,7 +16,13 @@
     <form [formGroup]="form">
         <div class="form-group">
             <label for="phone-number">Mobile Number</label>
-            <input class="form-control" type="text" appPhoneMask formControlName="phone" id="phone-number">
+            <input
+            type="text"
+            placeholder="Phone Number"
+            mask="(000) 000-0000"
+            formControlName="ShadowDomMaskTyped"
+            id="ShadowDomMaskTyped"
+            [showMaskTyped]="true" />
         </div>
     </form>
 </div>
