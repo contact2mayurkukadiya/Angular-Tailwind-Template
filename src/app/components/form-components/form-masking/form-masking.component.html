@@ -9,20 +9,25 @@
         within your website.</span>
 </div>
 
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Phone Number</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or link
-        within your website.</span>
-    <form [formGroup]="form">
-        <div class="form-group">
-            <label for="phone-number">Mobile Number</label>
-            <input
-            type="text"
-            placeholder="Phone Number"
-            mask="(000) 000-0000"
-            formControlName="ShadowDomMaskTyped"
-            id="ShadowDomMaskTyped"
-            [showMaskTyped]="true" />
+<div class="mt-4">
+    <div class="grid grid-cols-2 gap-2">
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Phone Number</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <form [formGroup]="form">
+                <div class="form-group">
+                    <label for="phone-number">Mobile Number</label>
+                    <!-- <input type="text" placeholder="Phone Number" mask="(000) 000-0000"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" [showMaskTyped]="true" /> -->
+
+                    <input type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        mask="(000) 000-0000" formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped"
+                        [showMaskTyped]="true">
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
