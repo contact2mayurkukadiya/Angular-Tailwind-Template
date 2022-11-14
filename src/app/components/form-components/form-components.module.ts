@@ -18,6 +18,7 @@ import { FormReadyToUseComponent } from './form-ready-to-use/form-ready-to-use.c
 import { FormMaskingComponent } from './form-masking/form-masking.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { SharedModule } from 'src/app/shared/shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    NgxMaskModule
   ],
 })
 export class FormComponentsModule {}
