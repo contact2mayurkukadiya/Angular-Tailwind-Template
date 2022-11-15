@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   faHome,
   faList,
@@ -17,7 +18,8 @@ import {
 })
 export class IndexSidebarComponent implements OnInit {
   home = faHome;
-  menu: any = [
+  Show: boolean = false;
+  menuList: any = [
     {
       id: 'dditem1',
       item: 'Dashboard',
@@ -36,10 +38,13 @@ export class IndexSidebarComponent implements OnInit {
         'flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
       fontClass: 'text-sm',
-      route: '/',
+      route: '/components',
     },
-  ];
-  menu2: any = [
+    {
+      listItem: false,
+      divider: true,
+      title: 'UI Elements',
+    },
     {
       id: 'dditem2',
       item: 'Components',
@@ -129,8 +134,11 @@ export class IndexSidebarComponent implements OnInit {
         },
       ],
     },
-  ];
-  menu3: any = [
+    {
+      listItem: false,
+      divider: true,
+      title: 'Forms',
+    },
     {
       id: 'dditem12',
       item: 'Form Components',
@@ -247,7 +255,19 @@ export class IndexSidebarComponent implements OnInit {
       route: 'form/ready',
     },
   ];
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  toggle() {
+    this.Show = !this.Show;
+  }
+
+  redirect(item) {
+    this.menuList.forEach((element) => {
+      if (element.id == item.id) {
+        element['selected'] = true;
+      }
+    });
+  }
 }

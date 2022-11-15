@@ -2,24 +2,34 @@
    <div
       class="w-full bg-white dark:bg-gray-800 overflow-x-hidden overflow-y-auto h-full py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <span class="sidebar-separator">Navigation</span>
-      <ul class="space-y-2 m-2">
-         <li>
-            <app-dropdown-widget [menu]="menu"></app-dropdown-widget>
-         </li>
-      </ul>
-
-      <span class="sidebar-separator">UI Elements</span>
-      <ul class="space-y-2 m-2">
-         <li>
-            <app-dropdown-widget [menu]="menu2"></app-dropdown-widget>
-         </li>
-      </ul>
-
-      <span class="sidebar-separator">Forms</span>
-      <ul class="space-y-2 m-2">
-         <li>
-            <app-dropdown-widget [menu]="menu3"></app-dropdown-widget>
-         </li>
-      </ul>
+      <ng-container *ngFor="let menuItem of menuList">
+         <ul class="space-y-2 m-2" *ngIf="(menuItem.listItem ||true) && (!menuItem.divider || false)">
+            <li>
+               <a type="button" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example"
+                  id="{{menuItem.id}}" data-bs-toggle="dropdown" aria-expanded="false"
+                  [class.sidebar-menu-item-selected]="menuItem.selected"
+                  (click)="menuItem.menuSubItem ? toggle() : redirect(menuItem)" [routerLink]="menuItem.route"
+                  [ngClass]="menuItem.class">
+                  <fa-icon *ngIf="menuItem?.icon" [icon]="menuItem?.icon"></fa-icon>
+                  <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass"
+                     sidebar-toggle-item="">{{menuItem.item}}</a>
+               </a>
+            </li>
+            <li *ngIf="menuItem.menuSubItem">
+               <ng-container *ngFor="let item of menuItem.menuSubItem">
+                  <a type="button" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example"
+                     id="{{item.id}}" data-bs-toggle="dropdown" aria-expanded="false"
+                     [class.sidebar-menu-item-selected]="item.selected"
+                     (click)="item.menuSubItem ? toggle() : redirect(item)" [routerLink]="item.route"
+                     [ngClass]="item.class">
+                     <fa-icon *ngIf="item?.icon" [icon]="item?.icon"></fa-icon>
+                     <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="item?.fontClass"
+                        sidebar-toggle-item="">{{item.item}}</a>
+                  </a>
+               </ng-container>
+            </li>
+         </ul>
+         <span class="sidebar-separator" *ngIf="menuItem.divider">{{menuItem.title}}</span>
+      </ng-container>
    </div>
 </aside>
