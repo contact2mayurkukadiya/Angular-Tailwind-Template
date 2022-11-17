@@ -18,7 +18,6 @@ import {
 export class IndexSidebarComponent implements OnInit {
   home = faHome;
   Show: boolean = false;
-
   menuList: any = [
     {
       id: 'dditem1',
