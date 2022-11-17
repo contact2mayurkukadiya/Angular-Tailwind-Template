@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class DropdownWidgetComponent implements OnInit {
   Show: boolean = false;
   @Input() menu: any;
-  constructor(private router: Router) {}
+  applyClass: boolean = true;
+  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {}
 
@@ -17,7 +18,15 @@ export class DropdownWidgetComponent implements OnInit {
     this.Show = !this.Show;
   }
 
-  redirect(route) {
-    this.router.navigate([route]);
+  redirect(item) {
+    if (item) {
+      this.menu.forEach((element) => {
+        if (item.id == element.id) {
+          element['selected'] = true;
+        }
+      });
+      this.router.navigate([item.route]);
+    }
+    this.cdr.markForCheck();
   }
 }
