@@ -1,16 +1,32 @@
-<div class="accordion" id="{{data?.id}}">
-    <div class="accordion-item bg-white border border-gray-200">
-        <h2 class="accordion-header mb-0" id="{{data?.id}}">
-            <button class="" [ngClass]="data?.buttonClass" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" type="button"
-                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-                aria-controls="flush-collapseOne" (click)="toggle()">
-                {{data?.buttonTitle}}
-            </button>
-        </h2>
-        <div id="{{data?.divID}}" *ngIf="show" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <ng-content></ng-content>
-        </div>
-    </div>
+<div id="{{data.id}}" data-accordion="collapse" class="mt-4"
+    data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+    data-inactive-classes="text-gray-500 dark:text-gray-400">
+    <h2 id="{{data.header_id}}">
+        <button type="button"
+            [ngClass]="data.btnClass ? data.btnClass : 'flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'"
+            [attr.data-accordion-target]="'#' + data.body_id" aria-expanded="true" [attr.aria-controls]="data.body_id">
+            <span>
+                <fa-icon *ngIf="data.icon" [icon]="data.icon"></fa-icon>
+                {{data.buttonTitle}}
+            </span>
+            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg" *ngIf="data?.displayArrow">
+                <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                *ngIf="data?.sameArrow">
+                <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" *ngIf="data.circleArrow">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+            </svg>
+        </button>
+    </h2>
+    <ng-content></ng-content>
 </div>

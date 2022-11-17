@@ -151,54 +151,63 @@ export class IndexSidebarComponent implements OnInit {
       fontClass: 'text-sm',
       menuSubItem: [
         {
+          id: 'dditem120',
           route: 'form/input-field',
           name: 'Input Fields',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem121',
           route: 'form/file-input',
           name: 'File Input',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem122',
           route: 'form/search-input',
           name: 'Search Input',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem123',
           route: 'form/textarea',
           name: 'Textarea',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem124',
           route: 'form/checkbox',
           name: 'Checkbox',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem125',
           route: 'form/radio',
           name: 'Radio',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem126',
           route: 'form/toggle',
           name: 'Toggle',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem127',
           route: 'form/range',
           name: 'Range',
           subItemClass:
             'flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem128',
           route: 'form/floating-label',
           name: 'Floating Label',
           subItemClass:
@@ -257,6 +266,7 @@ export class IndexSidebarComponent implements OnInit {
       route: 'form/ready',
     },
   ];
+  copyMenuList: any = JSON.parse(JSON.stringify(this.menuList));
   constructor(private router: Router, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {}
@@ -267,8 +277,10 @@ export class IndexSidebarComponent implements OnInit {
 
   menuselected(item, menu = 'menu', parentmenuid = 0) {
     if (item) {
-      this.menuList.forEach((element) => {
+      this.copyMenuList = JSON.parse(JSON.stringify(this.menuList));
+      this.copyMenuList.forEach((element) => {
         if (menu == 'menu') {
+          this.Show = false;
           if (item.id == element.id) {
             element['selected'] = true;
           } else {
