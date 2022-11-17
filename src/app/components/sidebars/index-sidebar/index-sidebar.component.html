@@ -2,24 +2,36 @@
    <div
       class="w-full bg-white dark:bg-gray-800 overflow-x-hidden overflow-y-auto h-full py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <span class="sidebar-separator">Navigation</span>
-      <ul class="space-y-2 m-2">
-         <li>
-            <app-dropdown-widget [menu]="menu"></app-dropdown-widget>
-         </li>
-      </ul>
+      <ng-container *ngFor="let menuItem of menuList">
+         <ul class="space-y-2 m-2" *ngIf="(menuItem.listItem ||true) && (!menuItem.divider || false)">
+            <li>
+               <button *ngIf="!menuItem.menuSubItem" type="button" id="{{menuItem.id}}" aria-expanded="false"
+                  [class]="menuItem.class" (click)="menuselected(menuItem)" [routerLink]="menuItem.route"
+                  [ngClass]="menuItem.selected ? 'active' : 'de-active'">
+                  <fa-icon *ngIf="menuItem?.icon" [icon]="menuItem?.icon"></fa-icon>
+                  <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass"
+                     sidebar-toggle-item="">{{menuItem.item}}</a>
+               </button>
 
-      <span class="sidebar-separator">UI Elements</span>
-      <ul class="space-y-2 m-2">
-         <li>
-            <app-dropdown-widget [menu]="menu2"></app-dropdown-widget>
-         </li>
-      </ul>
+               <button *ngIf="menuItem.menuSubItem" type="button" aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example" id="{{menuItem.id}}" data-bs-toggle="dropdown"
+                  aria-expanded="false" [class]="menuItem.class" (click)="toggle()" [routerLink]="menuItem.route"
+                  [ngClass]="{'active':menuItem.selected}">
+                  <fa-icon *ngIf="menuItem?.icon" [icon]="menuItem?.icon"></fa-icon>
+                  <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass"
+                     sidebar-toggle-item="">{{menuItem.item}}</a>
+               </button>
 
-      <span class="sidebar-separator">Forms</span>
-      <ul class="space-y-2 m-2">
-         <li>
-            <app-dropdown-widget [menu]="menu3"></app-dropdown-widget>
-         </li>
-      </ul>
+               <ul *ngIf="Show" aria-labelledby="dropdownMenuButton1" [ngClass]="menuItem.ulClass">
+                  <li *ngFor="let item of menuItem.menuSubItem">
+                     <button type="button" id="{{item.id}}" aria-expanded="false"
+                        (click)="menuselected(item, 'sub-menu', menuItem.id)" [class]="item.subItemClass"
+                        [ngClass]="item.selected ? 'active' : 'de-active'">{{item.name}}</button>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         <span class="sidebar-separator" *ngIf="menuItem.divider">{{menuItem.title}}</span>
+      </ng-container>
    </div>
 </aside>

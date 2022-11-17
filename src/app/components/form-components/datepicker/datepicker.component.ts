@@ -12,6 +12,5 @@ export class DatepickerComponent implements OnInit {
 
   openDatePicker(event) {
     console.log('event: ', event);
-    //
   }
 }
