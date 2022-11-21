@@ -25,6 +25,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { ListComponent } from './list/list.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonComponentModule } from '../common/common-component.module';
+import { PartialsModule } from '../core/partials/partials.module';
 
 Alpine.start();
 @NgModule({
@@ -45,7 +47,7 @@ Alpine.start();
     CardComponent,
     CarouselComponent,
     DropdownComponent,
-    ListComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
@@ -54,12 +56,14 @@ Alpine.start();
     HighlightModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonComponentModule,
+    PartialsModule,
   ],
   exports: [
     IndexNavbarComponent,
     IndexSidebarComponent,
-    IndexBreadcrumbComponent,
+    IndexBreadcrumbComponent
   ],
 })
 export class ComponentsModule {}

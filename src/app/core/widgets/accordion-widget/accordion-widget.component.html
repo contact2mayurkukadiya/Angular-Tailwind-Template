@@ -1,4 +1,4 @@
-<div id="{{data.id}}" data-accordion="collapse" class="mt-4"
+<!-- <div id="{{data.id}}" data-accordion="collapse" class="mt-4"
     data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
     data-inactive-classes="text-gray-500 dark:text-gray-400">
     <h2 id="{{data.header_id}}">
@@ -29,4 +29,19 @@
         </button>
     </h2>
     <ng-content></ng-content>
-</div>
+</div> -->
+
+<flowbite-demo-page>
+    <flowbite-demo-example title="Default accordion" codeClassName="dark:!bg-gray-900 divide-y">
+        <flowbite-accordion [flush]="data?.flush">
+            <flowbite-accordion-panel [open]="data.open">
+                <flowbite-accordion-title [data]="data">
+                    {{data.buttonTitle}}
+                </flowbite-accordion-title>
+                <flowbite-accordion-content>
+                    <ng-content></ng-content>
+                </flowbite-accordion-content>
+            </flowbite-accordion-panel>
+        </flowbite-accordion>
+    </flowbite-demo-example>
+</flowbite-demo-page>

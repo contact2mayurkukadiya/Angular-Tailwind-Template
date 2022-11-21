@@ -6,10 +6,30 @@ import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { DropdownWidgetComponent } from './dropdown-widget/dropdown-widget.component';
 import { AccordionWidgetComponent } from './accordion-widget/accordion-widget.component';
 import { BreadcrumbWidgetComponent } from './breadcrumb-widget/breadcrumb-widget.component';
+import { CommonComponentModule } from 'src/app/common/common-component.module';
+import { PartialsModule } from '../partials/partials.module';
+import { ButtonWidgetComponent } from './button-widget/button-widget.component';
+import { BadgeWidgetComponent } from './badge-widget/badge-widget.component';
 
 @NgModule({
-  declarations: [ChartWidgetComponent, CodeHighlighterWidgetComponent, DropdownWidgetComponent, AccordionWidgetComponent, BreadcrumbWidgetComponent],
-  imports: [CommonModule, SharedModule],
-  exports: [ChartWidgetComponent, CodeHighlighterWidgetComponent, DropdownWidgetComponent, AccordionWidgetComponent, BreadcrumbWidgetComponent],
+  declarations: [
+    ChartWidgetComponent,
+    CodeHighlighterWidgetComponent,
+    DropdownWidgetComponent,
+    AccordionWidgetComponent,
+    BreadcrumbWidgetComponent,
+    ButtonWidgetComponent,
+    BadgeWidgetComponent,
+  ],
+  imports: [CommonModule, SharedModule, CommonComponentModule, PartialsModule],
+  exports: [
+    ChartWidgetComponent,
+    CodeHighlighterWidgetComponent,
+    DropdownWidgetComponent,
+    AccordionWidgetComponent,
+    BreadcrumbWidgetComponent,
+    ButtonWidgetComponent,
+    BadgeWidgetComponent
+  ],
 })
 export class WidgetsModule {}

@@ -14,6 +14,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-collapse-heading-1',
       body_id: 'accordion-collapse-body-1',
       displayArrow: true,
+      open: true,
     },
     {
       id: 'accordion-collapse',
@@ -21,6 +22,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-collapse-heading-2',
       body_id: 'accordion-collapse-body-2',
       displayArrow: true,
+      open: false,
     },
     {
       id: 'accordion-collapse',
@@ -28,6 +30,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-collapse-heading-3',
       body_id: 'accordion-collapse-body-3',
       displayArrow: true,
+      open: false,
     },
   ];
 
@@ -39,6 +42,7 @@ export class AccordianComponent implements OnInit {
       body_id: 'accordion-open-body-1',
       icon: faCircleQuestion,
       displayArrow: true,
+      open: true,
     },
     {
       id: 'accordion-open',
@@ -47,6 +51,7 @@ export class AccordianComponent implements OnInit {
       body_id: 'accordion-open-body-2',
       icon: faCircleQuestion,
       displayArrow: true,
+      open: true,
     },
     {
       id: 'accordion-open',
@@ -65,6 +70,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-color-heading-1',
       body_id: 'accordion-color-body-1',
       displayArrow: true,
+      color:true
     },
     {
       id: 'accordion-color',
@@ -72,6 +78,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-color-heading-2',
       body_id: 'accordion-color-body-2',
       displayArrow: true,
+      color:true
     },
     {
       id: 'accordion-color',
@@ -79,6 +86,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-color-heading-3',
       body_id: 'accordion-color-body-3',
       displayArrow: true,
+      color:true
     },
   ];
 
@@ -91,6 +99,7 @@ export class AccordianComponent implements OnInit {
       btnClass:
         'flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400',
       displayArrow: true,
+      flush : true
     },
     {
       id: 'accordion-flush',
@@ -100,6 +109,7 @@ export class AccordianComponent implements OnInit {
       btnClass:
         'flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400',
       displayArrow: true,
+      flush : true
     },
     {
       id: 'accordion-flush',
@@ -118,7 +128,7 @@ export class AccordianComponent implements OnInit {
       buttonTitle: 'This is default Accordion',
       header_id: 'accordion-arrow-icon-heading-1',
       body_id: 'accordion-arrow-icon-body-1',
-      displayArrow: false,
+      displayArrow: true,
     },
     {
       id: 'accordion-arrow-icon',
@@ -126,6 +136,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-arrow-icon-heading-2',
       body_id: 'accordion-arrow-icon-body-2',
       sameArrow: true,
+      displayArrow: true
     },
     {
       id: 'accordion-arrow-icon',
@@ -133,6 +144,7 @@ export class AccordianComponent implements OnInit {
       header_id: 'accordion-arrow-icon-heading-3',
       body_id: 'accordion-arrow-icon-body-3',
       circleArrow: true,
+      displayArrow: true
     },
   ];
 

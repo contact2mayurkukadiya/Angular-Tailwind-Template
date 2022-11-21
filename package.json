@@ -29,6 +29,7 @@
     "ngx-clipboard": "^15.1.0",
     "ngx-highlightjs": "^7.0.1",
     "ngx-mask": "^14.2.4",
+    "prismjs": "^1.29.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
