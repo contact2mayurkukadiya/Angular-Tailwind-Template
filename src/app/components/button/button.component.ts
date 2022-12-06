@@ -1,6 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { buttonJSON } from '@configJson';
+import { faCartArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { HighlightAutoResult } from 'ngx-highlightjs';
 
 @Component({
@@ -10,6 +11,8 @@ import { HighlightAutoResult } from 'ngx-highlightjs';
   encapsulation: ViewEncapsulation.None,
 })
 export class ButtonComponent implements OnInit {
+  cartArrow = faCartArrowDown;
+  arrowRightIcon = faArrowRight;
   buttonData: any = {
     buttonData: [
       {
