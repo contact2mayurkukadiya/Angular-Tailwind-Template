@@ -5,8 +5,9 @@ import {
   faGift,
   faShareSquare,
   faEllipsisH,
-  faStar
+  faStar,
 } from '@fortawesome/free-solid-svg-icons';
+import { ScriptInjectorService } from 'src/app/core/services/script-injector.service';
 
 @Component({
   selector: 'app-card',
@@ -21,7 +22,13 @@ export class CardComponent implements OnInit {
   ellipsisHIcon = faEllipsisH;
   starIcon = faStar;
 
-  constructor() {}
+  constructor(private scriptInjector: ScriptInjectorService) {}
 
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.scriptInjector.load(
+      'https://unpkg.com/flowbite@1.5.3/dist/flowbite.js'
+    );
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScriptInjectorService } from 'src/app/core/services/script-injector.service';
 
 @Component({
   selector: 'app-tooltip',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tooltip.component.scss'],
 })
 export class TooltipComponent implements OnInit {
-  constructor() {}
+  
+  constructor(private scriptInjector: ScriptInjectorService) {}
 
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.scriptInjector.load(
+      'https://unpkg.com/flowbite@1.5.3/dist/flowbite.js'
+    );
+  }
 }
