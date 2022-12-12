@@ -15,14 +15,15 @@
 
                <button *ngIf="menuItem.menuSubItem" type="button" aria-controls="dropdown-example"
                   data-collapse-toggle="dropdown-example" id="{{menuItem.id}}" data-bs-toggle="dropdown"
-                  aria-expanded="false" [class]="menuItem.class" (click)="toggle()" [routerLink]="menuItem.route"
-                  [ngClass]="{'active':menuItem.selected}">
+                  aria-expanded="false" [class]="menuItem.class" (click)="toggle(menuItem)"
+                  [routerLink]="menuItem.route" [ngClass]="{'active':menuItem.selected}">
                   <fa-icon *ngIf="menuItem?.icon" [icon]="menuItem?.icon"></fa-icon>
                   <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass"
                      sidebar-toggle-item="">{{menuItem.item}}</a>
                </button>
 
-               <ul *ngIf="Show" aria-labelledby="dropdownMenuButton1" [ngClass]="menuItem.ulClass" [id]="menuItem.id">
+               <ul *ngIf="menuItem.selected" aria-labelledby="dropdownMenuButton1" [ngClass]="menuItem.ulClass"
+                  [id]="menuItem.id">
                   <li *ngFor="let item of menuItem.menuSubItem">
                      <button type="button" id="{{item.id}}" aria-expanded="false"
                         (click)="menuselected(item, 'sub-menu', menuItem.id)" [class]="item.subItemClass"

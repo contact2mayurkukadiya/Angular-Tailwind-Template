@@ -20,10 +20,7 @@
                 <button data-dropdown-toggle="dropdown" (toggle)="toggle('dropdownDefault')"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     type="button">Dropdown button
-                    <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
+                    <fa-icon [icon]="arrowDownIcon" class="ml-2 text-sm"></fa-icon>
                 </button>
                 <div id="dropdown" id="dropdownDefault" *ngIf="open"
                     class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
@@ -59,10 +56,9 @@
             <div class="pt-4 text-center">
                 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    type="button">Dropdown divider <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg></button>
+                    type="button">Dropdown divider
+                    <fa-icon [icon]="arrowDownIcon" class="ml-2 text-sm"></fa-icon>
+                </button>
                 <div id="dropdownDivider"
                     class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                     data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
@@ -97,10 +93,9 @@
             <div class="pt-4 text-center">
                 <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    type="button">Dropdown header <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg></button>
+                    type="button">Dropdown header
+                    <fa-icon [icon]="arrowDownIcon" class="ml-2 text-sm"></fa-icon>
+                </button>
                 <div id="dropdownInformation"
                     class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                     data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
@@ -140,10 +135,9 @@
             <div class="pt-4 text-center">
                 <button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    type="button">Dropdown button <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg></button>
+                    type="button">Dropdown button
+                    <fa-icon [icon]="arrowDownIcon" class="ml-2 text-sm"></fa-icon>
+                </button>
                 <div id="dropdown"
                     class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
@@ -210,10 +204,9 @@
             <div class="pt-4 text-center">
                 <button id="dropdownCheckboxButton" data-dropdown-toggle="dropdownDefaultCheckbox"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    type="button">Dropdown checkbox <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg></button>
+                    type="button">Dropdown checkbox
+                    <fa-icon [icon]="arrowDownIcon" class="ml-2 text-sm"></fa-icon>
+                </button>
                 <div id="dropdownDefaultCheckbox"
                     class="hidden z-10 w-48 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                     data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
@@ -453,7 +446,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-1.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_1.jpg"
                                     alt="Jese image">
                                 Jese Leos
                             </a>
@@ -461,7 +454,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-2.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_2.jpg"
                                     alt="Jese image">
                                 Robert Gough
                             </a>
@@ -469,7 +462,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_3.jpg"
                                     alt="Jese image">
                                 Bonnie Green
                             </a>
@@ -477,7 +470,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-4.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_4.jpg"
                                     alt="Jese image">
                                 Leslie Livingston
                             </a>
@@ -485,7 +478,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_5.jpg"
                                     alt="Jese image">
                                 Michael Gough
                             </a>
@@ -493,7 +486,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-2.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_2.jpg"
                                     alt="Jese image">
                                 Joseph Mcfall
                             </a>
@@ -501,7 +494,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_1.jpg"
                                     alt="Jese image">
                                 Roberta Casas
                             </a>
@@ -509,7 +502,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                <img class="mr-2 w-6 h-6 rounded-full" src="/docs/images/people/profile-picture-1.jpg"
+                                <img class="mr-2 w-6 h-6 rounded-full" src="assets/images/profile/avatar_1.jpg"
                                     alt="Jese image">
                                 Neil Sims
                             </a>
@@ -517,12 +510,7 @@
                     </ul>
                     <a href="#"
                         class="flex items-center p-3 text-sm font-medium text-blue-600 bg-gray-50 border-t border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-blue-500 hover:underline">
-                        <svg class="mr-1 w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z">
-                            </path>
-                        </svg>
+                        <fa-icon [icon]="addUserIcon"></fa-icon>
                         Add new user
                     </a>
                 </div>
@@ -751,7 +739,7 @@
                     <div class="divide-y divide-gray-100 dark:divide-gray-700">
                         <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="/docs/images/people/profile-picture-1.jpg"
+                                <img class="w-11 h-11 rounded-full" src="assets/images/profile/avatar_1.jpg"
                                     alt="Jese image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-blue-600 rounded-full border border-white dark:border-gray-800">
@@ -776,7 +764,7 @@
                         </a>
                         <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="/docs/images/people/profile-picture-2.jpg"
+                                <img class="w-11 h-11 rounded-full" src="assets/images/profile/avatar_2.jpg"
                                     alt="Joseph image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-800">
@@ -799,7 +787,7 @@
                         </a>
                         <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
+                                <img class="w-11 h-11 rounded-full" src="assets/images/profile/avatar_1.jpg"
                                     alt="Bonnie image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-800">
@@ -823,7 +811,7 @@
                         </a>
                         <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="/docs/images/people/profile-picture-4.jpg"
+                                <img class="w-11 h-11 rounded-full" src="assets/images/profile/avatar_4.jpg"
                                     alt="Leslie image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-800">
@@ -847,7 +835,7 @@
                         </a>
                         <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
+                                <img class="w-11 h-11 rounded-full" src="assets/images/profile/avatar_5.jpg"
                                     alt="Robert image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-800">

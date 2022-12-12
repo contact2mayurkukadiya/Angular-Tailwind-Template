@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { ScriptInjectorService } from 'src/app/core/services/script-injector.service';
 
 @Component({
@@ -8,8 +8,9 @@ import { ScriptInjectorService } from 'src/app/core/services/script-injector.ser
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent implements OnInit {
-  arrowDownIcon = faArrowDown;
   open: boolean = false;
+  arrowDownIcon = faAngleDown;
+  addUserIcon = faUserPlus;
 
   constructor(private scriptInjector: ScriptInjectorService) {}
 

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {
   faCircleCheck,
-  faArrowRight,
+  faAngleRight,
   faGift,
   faShareSquare,
   faEllipsisH,
   faStar,
+  faQuestionCircle
 } from '@fortawesome/free-solid-svg-icons';
 import { ScriptInjectorService } from 'src/app/core/services/script-injector.service';
 
@@ -16,11 +17,12 @@ import { ScriptInjectorService } from 'src/app/core/services/script-injector.ser
 })
 export class CardComponent implements OnInit {
   circleCheckIcon = faCircleCheck;
-  arrowRightIcon = faArrowRight;
+  arrowRightIcon = faAngleRight;
   giftIcon = faGift;
   shareIcon = faShareSquare;
   ellipsisHIcon = faEllipsisH;
   starIcon = faStar;
+  questionIcon = faQuestionCircle;
 
   constructor(private scriptInjector: ScriptInjectorService) {}
 

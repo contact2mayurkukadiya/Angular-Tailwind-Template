@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { ScriptInjectorService } from 'src/app/core/services/script-injector.service';
 
 @Component({
@@ -7,6 +8,10 @@ import { ScriptInjectorService } from 'src/app/core/services/script-injector.ser
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit {
+
+  angleRight = faAngleRight;
+  angleLeft = faAngleLeft;
+
   constructor(private scriptInjector: ScriptInjectorService) {}
 
   ngOnInit(): void {}
