@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faEarth, faHeart, faEllipsisH, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { ScriptInjectorService } from 'src/app/core/services/script-injector.service';
 
 @Component({
@@ -7,6 +8,12 @@ import { ScriptInjectorService } from 'src/app/core/services/script-injector.ser
   styleUrls: ['./popover.component.scss'],
 })
 export class PopoverComponent implements OnInit {
+
+  earthIcon = faEarth;
+  heartIcon = faHeart;
+  elipseHIcon = faEllipsisH;
+  angleRightIcon = faAngleRight;
+
   constructor(private scriptInjector: ScriptInjectorService) {}
 
   ngOnInit(): void {}

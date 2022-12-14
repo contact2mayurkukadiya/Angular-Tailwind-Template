@@ -6,7 +6,7 @@ import {
   faShareSquare,
   faEllipsisH,
   faStar,
-  faQuestionCircle
+  faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { ScriptInjectorService } from 'src/app/core/services/script-injector.service';
 
