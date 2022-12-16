@@ -1,6 +1,6 @@
 <span [class.group]="href">
-    <!-- [routerLink]="href" -->
-    <a class="flex h-fit items-center gap-1 font-semibold" [class.cursor-pointer]="href" [ngClass]="[
+  <!-- [routerLink]="href" -->
+  <a class="flex h-fit items-center gap-1 font-semibold" [class.cursor-pointer]="href" [ngClass]="[
         colorClasses[color],
         sizeClasses[size],
         !iconOnly
@@ -10,6 +10,6 @@
           : 'rounded-full p-1.5',
         customStyle
       ]">
-        <ng-content></ng-content>
-    </a>
+    <ng-content></ng-content>
+  </a>
 </span>

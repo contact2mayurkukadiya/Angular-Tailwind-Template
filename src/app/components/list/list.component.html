@@ -9,328 +9,341 @@
         within your website.</span>
 </div>
 
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Unordored list</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-    <ul class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
-        <li>
-            At least 10 characters (and up to 100 characters)
-        </li>
-        <li>
-            At least one lowercase character
-        </li>
-        <li>
-            Inclusion of at least one special character, e.g., ! @ # ?
-        </li>
-    </ul>
-</div>
 
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Icons</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-    <ul class="space-y-1 max-w-md list-inside text-gray-500 dark:text-gray-400">
-        <li class="flex items-center">
-            <fa-icon [icon]="checkCircleIcon" class="mr-1 text-green-500 text-xs"></fa-icon>
-            At least 10 characters
-        </li>
-        <li class="flex items-center">
-            <fa-icon [icon]="checkCircleIcon" class="mr-1 text-green-500 text-xs"></fa-icon>
-            At least one lowercase character
-        </li>
-        <li class="flex items-center">
-            <fa-icon [icon]="closeIcon" class="mr-1 text-gray-500 text-xs"></fa-icon>
-            At least one special character, e.g., ! @ # ?
-        </li>
-    </ul>
-</div>
+<div class="mt-4">
+    <div class="grid grid-cols-2 gap-2">
 
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Nested</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <ol class="space-y-4 list-decimal list-inside text-gray-500 dark:text-gray-400">
-        <li>
-            List item one
-            <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
-                <li>You might feel like you are being really "organized" o</li>
-                <li>Nested navigation in UIs is a bad idea too, keep things as flat as possible.</li>
-                <li>Nesting tons of folders in your source code is also not helpful.</li>
+        <!-- Unordored -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Unordored list</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <h2 class="mb-2 text-lg font-semibold content-title-text text-gray-900 dark:text-white">Password
+                requirements:</h2>
+            <ul
+                class="space-y-1 max-w-md list-disc list-inside content-description-text text-gray-500 dark:text-gray-400">
+                <li>
+                    At least 10 characters (and up to 100 characters)
+                </li>
+                <li>
+                    At least one lowercase character
+                </li>
+                <li>
+                    Inclusion of at least one special character, e.g., ! @ # ?
+                </li>
             </ul>
-        </li>
-        <li>
-            List item two
-            <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
-                <li>I'm not sure if we'll bother styling more than two levels deep.</li>
-                <li>Two is already too much, three is guaranteed to be a bad idea.</li>
-                <li>If you nest four levels deep you belong in prison.</li>
-            </ul>
-        </li>
-        <li>
-            List item three
-            <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
-                <li>Again please don't nest lists if you want</li>
-                <li>Nobody wants to look at this.</li>
-                <li>I'm upset that we even have to bother styling this.</li>
-            </ul>
-        </li>
-    </ol>
+        </div>
 
-    <ul class="space-y-4 list-disc list-inside text-gray-500 dark:text-gray-400">
-        <li>
-            List item one
-            <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-                <li>You might feel like you are being really "organized" o</li>
-                <li>Nested navigation in UIs is a bad idea too, keep things as flat as possible.</li>
-                <li>Nesting tons of folders in your source code is also not helpful.</li>
+        <!-- Icons -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Icons</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <h2 class="mb-2 text-lg font-semibold content-title-text text-gray-900 dark:text-white">Password
+                requirements:</h2>
+            <ul class="space-y-1 max-w-md list-inside content-description-text text-gray-500 dark:text-gray-400">
+                <li class="flex items-center">
+                    <fa-icon [icon]="checkCircleIcon" class="mr-1 text-green-500 text-xs"></fa-icon>
+                    At least 10 characters
+                </li>
+                <li class="flex items-center">
+                    <fa-icon [icon]="checkCircleIcon" class="mr-1 text-green-500 text-xs"></fa-icon>
+                    At least one lowercase character
+                </li>
+                <li class="flex items-center">
+                    <fa-icon [icon]="closeIcon" class="mr-1 text-gray-500 text-xs"></fa-icon>
+                    At least one special character, e.g., ! @ # ?
+                </li>
+            </ul>
+        </div>
+
+        <!-- Nested -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Nested</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <ol class="space-y-4 list-decimal list-inside text-gray-500 dark:text-gray-400">
+                <li>
+                    <span class="content-title-text">List item one</span>
+                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside content-description-text">
+                        <li>You might feel like you are being really "organized" o</li>
+                        <li>Nested navigation in UIs is a bad idea too, keep things as flat as possible.</li>
+                        <li>Nesting tons of folders in your source code is also not helpful.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="content-title-text">List item two</span>
+                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside content-description-text">
+                        <li>I'm not sure if we'll bother styling more than two levels deep.</li>
+                        <li>Two is already too much, three is guaranteed to be a bad idea.</li>
+                        <li>If you nest four levels deep you belong in prison.</li>
+                    </ul>
+                </li>
             </ol>
-        </li>
-        <li>
-            List item two
-            <ul class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-                <li>I'm not sure if we'll bother styling more than two levels deep.</li>
-                <li>Two is already too much, three is guaranteed to be a bad idea.</li>
-                <li>If you nest four levels deep you belong in prison.</li>
+
+            <ul class="space-y-4 list-disc list-inside content-description-text text-gray-500 dark:text-gray-400">
+                <li>
+                    <span class="content-title-text">List item one</span>
+                    <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
+                        <li>You might feel like you are being really "organized" o</li>
+                        <li>Nested navigation in UIs is a bad idea too, keep things as flat as possible.</li>
+                        <li>Nesting tons of folders in your source code is also not helpful.</li>
+                    </ol>
+                </li>
+                <li>
+                    <span class="content-title-text">List item two</span>
+                    <ul class="pl-5 mt-2 space-y-1 list-decimal list-inside">
+                        <li>I'm not sure if we'll bother styling more than two levels deep.</li>
+                        <li>Two is already too much, three is guaranteed to be a bad idea.</li>
+                        <li>If you nest four levels deep you belong in prison.</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li>
-            List item three
-            <ul class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-                <li>Again please don't nest lists if you want</li>
-                <li>Nobody wants to look at this.</li>
-                <li>I'm upset that we even have to bother styling this.</li>
+        </div>
+
+        <!-- Advanced layout -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Advanced layout</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <ul class="max-w-md divide-y content-description-text divide-gray-200 dark:divide-gray-700">
+                <li class="pb-3 sm:pb-4">
+                    <div class="flex items-center space-x-4 content-description-text">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_1.jpg" alt="Neil image">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Neil Sims
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                email@flowbite.com
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $320
+                        </div>
+                    </div>
+                </li>
+                <li class="py-3 sm:py-4">
+                    <div class="flex items-center space-x-4 content-description-text">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_2.jpg" alt="Neil image">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Bonnie Green
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                email@flowbite.com
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $3467
+                        </div>
+                    </div>
+                </li>
+                <li class="py-3 sm:py-4">
+                    <div class="flex items-center space-x-4 content-description-text">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_3.jpg" alt="Neil image">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Michael Gough
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                email@flowbite.com
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $67
+                        </div>
+                    </div>
+                </li>
+                <li class="py-3 sm:py-4">
+                    <div class="flex items-center space-x-4 content-description-text">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_4.jpg" alt="Neil image">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Thomas Lean
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                email@flowbite.com
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $2367
+                        </div>
+                    </div>
+                </li>
+                <li class="pt-3 pb-0 sm:pt-4">
+                    <div class="flex items-center space-x-4 content-description-text">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_5.jpg" alt="Neil image">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Lana Byrd
+                            </p>
+                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                email@flowbite.com
+                            </p>
+                        </div>
+                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                            $367
+                        </div>
+                    </div>
+                </li>
             </ul>
-        </li>
-    </ul>
-</div>
-
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Unstyled</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-    <ul class="space-y-1 max-w-md list-none list-inside text-gray-500 dark:text-gray-400">
-        <li>
-            At least 10 characters (and up to 100 characters)
-        </li>
-        <li>
-            At least one lowercase character
-        </li>
-        <li>
-            Inclusion of at least one special character, e.g., ! @ # ?
-        </li>
-    </ul>
-</div>
-
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Ordered list</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Top students:</h2>
-    <ol class="space-y-1 max-w-md list-decimal list-inside text-gray-500 dark:text-gray-400">
-        <li>
-            <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> with <span
-                class="font-semibold text-gray-900 dark:text-white">70</span> points
-        </li>
-        <li>
-            <span class="font-semibold text-gray-900 dark:text-white">Jese Leos</span> with <span
-                class="font-semibold text-gray-900 dark:text-white">63</span> points
-        </li>
-        <li>
-            <span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span> with <span
-                class="font-semibold text-gray-900 dark:text-white">57</span> points
-        </li>
-    </ol>
-</div>
-
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Description list</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
-        <div class="flex flex-col pb-3">
-            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Email address</dt>
-            <dd class="text-lg font-semibold">yourname@flowbite.com</dd>
         </div>
-        <div class="flex flex-col py-3">
-            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Home address</dt>
-            <dd class="text-lg font-semibold">92 Miles Drive, Newark, NJ 07103, California, USA</dd>
+
+        <!-- Unstyled -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Unstyled</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <h2 class="mb-2 text-lg font-semibold content-title-text text-gray-900 dark:text-white">Password
+                requirements:</h2>
+            <ul
+                class="space-y-1 max-w-md list-none list-inside content-description-text text-gray-500 dark:text-gray-400">
+                <li>
+                    At least 10 characters (and up to 100 characters)
+                </li>
+                <li>
+                    At least one lowercase character
+                </li>
+                <li>
+                    Inclusion of at least one special character, e.g., ! @ # ?
+                </li>
+            </ul>
         </div>
-        <div class="flex flex-col pt-3">
-            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Phone number</dt>
-            <dd class="text-lg font-semibold">+00 123 456 789 / +12 345 678</dd>
+
+        <!-- Ordered -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Ordered list</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <h2 class="mb-2 text-lg font-semibold content-title-text content-title-text text-gray-900 dark:text-white">
+                Top students:</h2>
+            <ol
+                class="space-y-1 max-w-md list-decimal list-inside content-description-text text-gray-500 dark:text-gray-400">
+                <li>
+                    <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> with <span
+                        class="font-semibold text-gray-900 dark:text-white">70</span> points
+                </li>
+                <li>
+                    <span class="font-semibold text-gray-900 dark:text-white">Jese Leos</span> with <span
+                        class="font-semibold text-gray-900 dark:text-white">63</span> points
+                </li>
+                <li>
+                    <span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span> with <span
+                        class="font-semibold text-gray-900 dark:text-white">57</span> points
+                </li>
+            </ol>
         </div>
-    </dl>
-</div>
 
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">List with icons</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <ul class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">
-        <li class="flex items-center space-x-3">
-            <!-- Icon -->
-            <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
-            <span>Individual configuration</span>
-        </li>
-        <li class="flex items-center space-x-3">
-            <!-- Icon -->
-            <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
-            <span>No setup, or hidden fees</span>
-        </li>
-        <li class="flex items-center space-x-3">
-            <!-- Icon -->
-            <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
-            <span>Team size: <span class="font-semibold text-gray-900 dark:text-white">1 developer</span></span>
-        </li>
-        <li class="flex items-center space-x-3">
-            <!-- Icon -->
-            <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
-            <span>Premium support: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
-        </li>
-        <li class="flex items-center space-x-3">
-            <!-- Icon -->
-            <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
-            <span>Free updates: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
-        </li>
-    </ul>
-</div>
+        <!-- Description -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Description list</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                <div class="flex flex-col pb-3">
+                    <dt class="mb-1 content-description-text text-gray-500 md:text-lg dark:text-gray-400">Email address
+                    </dt>
+                    <dd class="text-lg font-semibold content-description-text content-title-text">yourname@flowbite.com
+                    </dd>
+                </div>
+                <div class="flex flex-col py-3">
+                    <dt class="mb-1 content-description-text text-gray-500 md:text-lg dark:text-gray-400">Home address
+                    </dt>
+                    <dd class="text-lg font-semibold content-description-text content-title-text">92 Miles Drive,
+                        Newark, NJ 07103, California, USA</dd>
+                </div>
+                <div class="flex flex-col pt-3">
+                    <dt class="mb-1 content-description-text text-gray-500 md:text-lg dark:text-gray-400">Phone number
+                    </dt>
+                    <dd class="text-lg font-semibold content-description-text content-title-text">+00 123 456 789 / +12
+                        345 678</dd>
+                </div>
+            </dl>
+        </div>
 
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Advanced layout</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
-        <li class="pb-3 sm:pb-4">
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_1.jpg" alt="Neil image">
-                </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Neil Sims
-                    </p>
-                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                        email@flowbite.com
-                    </p>
-                </div>
-                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                    $320
-                </div>
-            </div>
-        </li>
-        <li class="py-3 sm:py-4">
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_2.jpg" alt="Neil image">
-                </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Bonnie Green
-                    </p>
-                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                        email@flowbite.com
-                    </p>
-                </div>
-                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                    $3467
-                </div>
-            </div>
-        </li>
-        <li class="py-3 sm:py-4">
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_3.jpg" alt="Neil image">
-                </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Michael Gough
-                    </p>
-                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                        email@flowbite.com
-                    </p>
-                </div>
-                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                    $67
-                </div>
-            </div>
-        </li>
-        <li class="py-3 sm:py-4">
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_4.jpg" alt="Neil image">
-                </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Thomas Lean
-                    </p>
-                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                        email@flowbite.com
-                    </p>
-                </div>
-                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                    $2367
-                </div>
-            </div>
-        </li>
-        <li class="pt-3 pb-0 sm:pt-4">
-            <div class="flex items-center space-x-4">
-                <div class="flex-shrink-0">
-                    <img class="w-8 h-8 rounded-full" src="assets/images/profile/avatar_5.jpg" alt="Neil image">
-                </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Lana Byrd
-                    </p>
-                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                        email@flowbite.com
-                    </p>
-                </div>
-                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                    $367
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
+        <!-- with icons -->
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">List with icons</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <ul class="mb-8 space-y-4 text-left content-description-text text-gray-500 dark:text-gray-400">
+                <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                    <span>Individual configuration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                    <span>No setup, or hidden fees</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                    <span>Team size: <span class="font-semibold text-gray-900 dark:text-white">1 developer</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                    <span>Premium support: <span class="font-semibold text-gray-900 dark:text-white">6
+                            months</span></span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                    <span>Free updates: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-<div class="white-card mt-4">
-    <h1 class="card-title-text mt-0 mb-2">Horizontal list</h1>
-    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
-        link
-        within your website.</span>
-    <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Premium</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">Campaigns</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Blog</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
-        </li>
-    </ul>
+    <!-- Horizontal -->
+    <div class="white-card mt-4">
+        <h1 class="card-title-text mt-0 mb-2">Horizontal list</h1>
+        <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+            link
+            within your website.</span>
+        <ul class="flex flex-wrap justify-center items-center mt-2 text-gray-900 dark:text-white">
+            <li>
+                <a href="#" class="mr-4 content-title-text hover:underline md:mr-6 ">About</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 content-title-text hover:underline md:mr-6">Premium</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 content-title-text hover:underline md:mr-6 ">Campaigns</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 content-title-text hover:underline md:mr-6">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 content-title-text hover:underline md:mr-6">Affiliate Program</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 content-title-text hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 content-title-text hover:underline md:mr-6">Contact</a>
+            </li>
+        </ul>
+    </div>
 </div>

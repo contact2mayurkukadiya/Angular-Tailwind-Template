@@ -10,30 +10,32 @@
 
 <div class="mt-4">
   <div class="grid grid-cols-2 gap-2">
+
+    <!-- Default button -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Default button</h1>
       <span class="description-text">Use these default button styles with multiple colors to indicate an action or link
         within your website.</span>
-      <div class="flex flex-wrap gap-2">
-        <div class="flex flex-wrap gap-2">
-          <app-button-widget>Default</app-button-widget>
-          <app-button-widget color="gray">Gray</app-button-widget>
-          <app-button-widget color="dark">Dark</app-button-widget>
-          <app-button-widget color="light">Light</app-button-widget>
-          <app-button-widget color="success">Success</app-button-widget>
-          <app-button-widget color="failure">Failure</app-button-widget>
-          <app-button-widget color="warning">Warning</app-button-widget>
-          <app-button-widget color="purple">Purple</app-button-widget>
-        </div>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <app-button-widget>Default</app-button-widget>
+        <app-button-widget color="gray">Gray</app-button-widget>
+        <app-button-widget color="dark">Dark</app-button-widget>
+        <app-button-widget color="light">Light</app-button-widget>
+        <app-button-widget color="success">Success</app-button-widget>
+        <app-button-widget color="failure">Failure</app-button-widget>
+        <app-button-widget color="warning">Warning</app-button-widget>
+        <app-button-widget color="purple">Purple</app-button-widget>
       </div>
     </div>
+
+    <!-- Button pills  -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Button pills</h1>
       <span class="description-text">Choose from several predefined button styles, each serving its own semantic
         purpose, with a few extras
         thrown
         in for more control.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget [pill]="true" color="gray">Gray</app-button-widget>
         <app-button-widget [pill]="true" color="dark">Dark</app-button-widget>
         <app-button-widget [pill]="true" color="light">Light</app-button-widget>
@@ -43,12 +45,14 @@
         <app-button-widget [pill]="true" color="purple">Purple</app-button-widget>
       </div>
     </div>
+
+    <!-- Gradient -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Gradient monochrome</h1>
       <span class="description-text">Use the ripple effect and provide feedback to users in a simple and elegant way in
         the form of a wave
         animation. It also changes position depending on where each button is clicked.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget gradientMonochrome="info">Info</app-button-widget>
         <app-button-widget gradientMonochrome="success">Success</app-button-widget>
         <app-button-widget gradientMonochrome="cyan">Cyan</app-button-widget>
@@ -59,11 +63,13 @@
         <app-button-widget gradientMonochrome="purple">Purple</app-button-widget>
       </div>
     </div>
+
+    <!-- Gradient duo-tone -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Gradient duo-tone</h1>
       <span class="description-text">Use the following button styles to show the colors only for the border of the
         element.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget gradientDuoTone="purpleToBlue">
           Purple to Blue
         </app-button-widget>
@@ -87,10 +93,12 @@
         </app-button-widget>
       </div>
     </div>
+
+    <!-- Gradient outline -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Gradient outline</h1>
       <span class="description-text">Use elements rounded corners with the .rounded-full property.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget [outline]="true" gradientDuoTone="purpleToBlue">
           Purple to Blue
         </app-button-widget>
@@ -114,10 +122,12 @@
         </app-button-widget>
       </div>
     </div>
+
+    <!-- Outline buttons -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Outline buttons</h1>
       <span class="description-text">Use the border styles with .rounded-full class.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget [outline]="true"> Default </app-button-widget>
         <app-button-widget [outline]="true" color="dark"> Dark </app-button-widget>
         <app-button-widget [outline]="true" color="success">
@@ -134,6 +144,8 @@
         </app-button-widget>
       </div>
     </div>
+
+    <!-- Button sizes -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Button sizes</h1>
       <span class="description-text">Use floating action button that represents the primary action in an application.
@@ -141,7 +153,7 @@
         in
         front of all screen content, typically as a circular shape with an icon in its center.
       </span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget size="xs">Extra small</app-button-widget>
         <app-button-widget size="sm">Small</app-button-widget>
         <app-button-widget size="md">Base</app-button-widget>
@@ -149,13 +161,15 @@
         <app-button-widget size="xl">Extra large</app-button-widget>
       </div>
     </div>
+
+    <!-- with icon -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Buttons with icon</h1>
       <span class="description-text">Choose from several predefined button styles, each serving its own semantic
         purpose, with a few extras
         thrown
         in for more control.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget>
           <fa-icon [icon]="cartArrow" class="mr-2"></fa-icon>
           Buy now
@@ -166,22 +180,26 @@
         </app-button-widget>
       </div>
     </div>
+
+    <!-- with label -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Button with label</h1>
       <span class="description-text">Use the following styles to indicate a disabled button. This can be often used
         inside form elements to
         disable the submit button before all the form elements have been completed and validated.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget>
           Messages
           <app-badge-widget customStyle="py-0" [iconOnly]="true" class="ml-2">2</app-badge-widget>
         </app-button-widget>
       </div>
     </div>
+
+    <!-- Icon buttons -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Icon buttons</h1>
       <span class="description-text">Use the icon inside the button to more clearly indicate the action.</span>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mt-2">
         <app-button-widget>
           <fa-icon [icon]="arrowRightIcon" class="text-lg"></fa-icon>
         </app-button-widget>
@@ -196,6 +214,8 @@
         </app-button-widget>
       </div>
     </div>
+
+    <!-- Disabled -->
     <div class="white-card">
       <h1 class="card-title-text mt-0 mb-2">Disabled</h1>
       <span class="description-text">Use full width button to adjust it to the column width. Block buttons is more often

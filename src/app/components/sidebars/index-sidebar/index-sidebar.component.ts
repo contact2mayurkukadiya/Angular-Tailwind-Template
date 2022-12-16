@@ -18,6 +18,7 @@ import {
 export class IndexSidebarComponent implements OnInit {
   home = faHome;
   menuList: any = [
+    { separator: true, text: 'Navigation' },
     {
       id: 'dditem1',
       item: 'Dashboard',
@@ -38,6 +39,7 @@ export class IndexSidebarComponent implements OnInit {
       fontClass: 'text-sm',
       route: 'components',
     },
+    { separator: true, text: 'UI Elements' },
     {
       id: 'dditem3',
       item: 'Components',
@@ -140,6 +142,7 @@ export class IndexSidebarComponent implements OnInit {
         },
       ],
     },
+    { separator: true, text: 'Form Elements' },
     {
       id: 'dditem12',
       item: 'Form Components',

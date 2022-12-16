@@ -7,7 +7,7 @@ import { AccordionPanelComponent } from './accordion-panel.component';
   template: ` <button
     class="flex w-full items-center justify-between py-5 px-5 text-left font-medium text-gray-500 dark:text-gray-400"
     [ngClass]="{
-      'mt-4 bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white': data?.color,
+      'bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white': data?.color,
       'text-gray-900 dark:text-white': accordionPanel.open,
       'bg-gray-100 dark:bg-gray-800': accordionPanel.open && !accordion.flush,
       'hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800':

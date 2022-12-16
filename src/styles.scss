@@ -14,15 +14,23 @@
 }
 
 .description-text {
-  @apply text-xs text-[#919aa3];
+  @apply text-sm text-[#919aa3];
 }
 
 .page-title-text {
-  @apply text-lg text-[#303548] font-semibold;
+  @apply text-xl text-[#303548] font-semibold;
 }
 
 .card-title-text {
-  @apply text-sm text-[#505458] font-semibold;
+  @apply text-xl text-[#505458] font-semibold;
+}
+
+.content-title-text {
+  @apply text-base;
+}
+
+.content-description-text {
+  @apply text-sm;
 }
 
 .default {
@@ -54,11 +62,11 @@
   height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(13deg, #a6b7bc 14%, #4c4d4e 64%);
+  background: linear-gradient(13deg, #bed3da 14%, #9a9ea2 64%);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(13deg, #bed3da 14%, #9a9ea2 64%);
+  background: linear-gradient(13deg, #a6b7bc 14%, #4c4d4e 64%);
 }
 ::-webkit-scrollbar-track {
   background: #ffffff;
