@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormReadyToUseComponent } from './form-ready-to-use.component';
+import { ContactFormComponent } from './contact-form.component';
 
-describe('FormReadyToUseComponent', () => {
-  let component: FormReadyToUseComponent;
-  let fixture: ComponentFixture<FormReadyToUseComponent>;
+describe('ContactFormComponent', () => {
+  let component: ContactFormComponent;
+  let fixture: ComponentFixture<ContactFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormReadyToUseComponent ]
+      declarations: [ ContactFormComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FormReadyToUseComponent);
+    fixture = TestBed.createComponent(ContactFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

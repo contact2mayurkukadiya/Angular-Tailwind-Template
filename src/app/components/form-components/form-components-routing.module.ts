@@ -5,7 +5,8 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { FileInputComponent } from './file-input/file-input.component';
 import { FloatingLabelComponent } from './floating-label/floating-label.component';
 import { FormMaskingComponent } from './form-masking/form-masking.component';
-import { FormReadyToUseComponent } from './form-ready-to-use/form-ready-to-use.component';
+import { ContactFormComponent } from './form-ready-to-use/contact-form/contact-form.component';
+import { RegistrationFormComponent } from './form-ready-to-use/registration-form/registration-form.component';
 import { FormWizardComponent } from './form-wizard/form-wizard.component';
 import { InputFieldComponent } from './input-field/input-field.component';
 import { RadioComponent } from './radio/radio.component';
@@ -69,9 +70,13 @@ const routes: Routes = [
     component: FormWizardComponent,
   },
   {
-    path: 'ready',
-    component: FormReadyToUseComponent,
+    path: 'contact-form',
+    component: ContactFormComponent,
   },
+  {
+    path : 'registration-form',
+    component : RegistrationFormComponent
+  }
 ];
 
 @NgModule({

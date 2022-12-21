@@ -14,11 +14,11 @@ import { RangeComponent } from './range/range.component';
 import { FloatingLabelComponent } from './floating-label/floating-label.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { FormWizardComponent } from './form-wizard/form-wizard.component';
-import { FormReadyToUseComponent } from './form-ready-to-use/form-ready-to-use.component';
 import { FormMaskingComponent } from './form-masking/form-masking.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { NgxMaskModule } from 'ngx-mask';
+import { RegistrationFormComponent } from './form-ready-to-use/registration-form/registration-form.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +34,8 @@ import { NgxMaskModule } from 'ngx-mask';
     FloatingLabelComponent,
     DatepickerComponent,
     FormWizardComponent,
-    FormReadyToUseComponent,
     FormMaskingComponent,
+    RegistrationFormComponent
   ],
   imports: [
     CommonModule,

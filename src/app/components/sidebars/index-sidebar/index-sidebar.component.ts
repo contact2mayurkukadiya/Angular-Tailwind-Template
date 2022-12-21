@@ -218,16 +218,6 @@ export class IndexSidebarComponent implements OnInit {
       ],
     },
     {
-      id: 'dditem13',
-      item: 'Form Picker',
-      icon: faTableColumns,
-      class:
-        'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
-      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
-      fontClass: 'text-sm',
-      route: 'form/picker',
-    },
-    {
       id: 'dditem14',
       item: 'Form Select',
       icon: faTableColumns,
@@ -259,15 +249,31 @@ export class IndexSidebarComponent implements OnInit {
     },
     {
       id: 'dditem17',
-      item: 'Form ready to use',
+      item: 'Ready to use',
       icon: faTableColumns,
       class:
         'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
       fontClass: 'text-sm',
-      route: 'form/ready',
+      menuSubItem: [
+        {
+          id: 'dditem170',
+          route: 'form/contact-form',
+          name: 'Contact Form',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          id: 'dditem171',
+          route: 'form/registration-form',
+          name: 'Registration Form',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+      ],
     },
   ];
+  // { separator: true, text: 'Pages' },
   copyMenuList: any = JSON.parse(JSON.stringify(this.menuList));
   constructor(private router: Router, private cdr: ChangeDetectorRef) {}
 
@@ -282,11 +288,11 @@ export class IndexSidebarComponent implements OnInit {
       this.copyMenuList = JSON.parse(JSON.stringify(this.menuList));
       this.copyMenuList.forEach((element) => {
         if (menu == 'menu') {
-          item.selected = false;
+          // item.selected = false;
           if (item.id == element.id) {
             element['selected'] = true;
           } else {
-            element['selected'] = false;
+            // element['selected'] = false;
           }
         } else {
           if (parentmenuid == element.id) {

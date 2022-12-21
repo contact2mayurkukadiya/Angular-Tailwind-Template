@@ -3,7 +3,8 @@
       class="w-full bg-white dark:bg-gray-800 overflow-x-hidden overflow-y-auto h-full py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <ng-container *ngFor="let menuItem of copyMenuList">
          <span class="sidebar-separator" *ngIf="menuItem.separator">{{menuItem.text}}</span>
-         <ul class="space-y-2 m-2" *ngIf="(menuItem.listItem ||true) && (!menuItem.divider || false) && !(menuItem.separator)">
+         <ul class="space-y-2 m-2"
+            *ngIf="(menuItem.listItem ||true) && (!menuItem.divider || false) && !(menuItem.separator)">
             <li>
                <button *ngIf="!menuItem.menuSubItem" type="button" id="{{menuItem.id}}" aria-expanded="false"
                   [class]="menuItem.class" (click)="menuselected(menuItem)" [routerLink]="menuItem.route"
@@ -22,8 +23,8 @@
                      sidebar-toggle-item="">{{menuItem.item}}</a>
                </button>
 
-               <ul *ngIf="menuItem.selected" aria-labelledby="dropdownMenuButton1" [ngClass]="menuItem.ulClass"
-                  [id]="menuItem.id">
+               <ul *ngIf="menuItem.menuSubItem && menuItem.selected" aria-labelledby="dropdownMenuButton1"
+                  [ngClass]="menuItem.ulClass" [id]="menuItem.id">
                   <li *ngFor="let item of menuItem.menuSubItem">
                      <button type="button" id="{{item.id}}" aria-expanded="false"
                         (click)="menuselected(item, 'sub-menu', menuItem.id)" [class]="item.subItemClass"
