@@ -6,6 +6,7 @@ import { FileInputComponent } from './file-input/file-input.component';
 import { FloatingLabelComponent } from './floating-label/floating-label.component';
 import { FormMaskingComponent } from './form-masking/form-masking.component';
 import { ContactFormComponent } from './form-ready-to-use/contact-form/contact-form.component';
+import { LoginFormComponent } from './form-ready-to-use/login-form/login-form.component';
 import { RegistrationFormComponent } from './form-ready-to-use/registration-form/registration-form.component';
 import { FormWizardComponent } from './form-wizard/form-wizard.component';
 import { InputFieldComponent } from './input-field/input-field.component';
@@ -76,6 +77,10 @@ const routes: Routes = [
   {
     path : 'registration-form',
     component : RegistrationFormComponent
+  },
+  {
+    path: 'login-form',
+    component: LoginFormComponent
   }
 ];
 

@@ -19,6 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { NgxMaskModule } from 'ngx-mask';
 import { RegistrationFormComponent } from './form-ready-to-use/registration-form/registration-form.component';
+import { LoginFormComponent } from './form-ready-to-use/login-form/login-form.component';
+import { WidgetsModule } from 'src/app/core/widgets/widgets.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { RegistrationFormComponent } from './form-ready-to-use/registration-form
     DatepickerComponent,
     FormWizardComponent,
     FormMaskingComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    LoginFormComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +46,8 @@ import { RegistrationFormComponent } from './form-ready-to-use/registration-form
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    NgxMaskModule
+    NgxMaskModule,
+    WidgetsModule
   ],
 })
 export class FormComponentsModule {}
