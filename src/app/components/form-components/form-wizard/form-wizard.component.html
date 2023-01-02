@@ -14,40 +14,36 @@
         link
         within your website.</span>
     <div class="mt-2 text-center">
-        <ul class="stepper" data-mdb-stepper="stepper">
-            <li class="stepper-step stepper-active">
-                <div class="stepper-head" (click)="stepSelected($event)">
-                    <span class="stepper-head-icon"> 1 </span>
-                    <span class="stepper-head-text"> step1 </span>
-                </div>
-                <div class="stepper-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et
-                    dolore
-                    magna aliqua.
-                </div>
-            </li>
-            <li class="stepper-step">
-                <div class="stepper-head" (click)="stepSelected($event)">
-                    <span class="stepper-head-icon"> 2 </span>
-                    <span class="stepper-head-text"> step2 </span>
-                </div>
-                <div class="stepper-content">
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo
-                    consequat.
-                </div>
-            </li>
-            <li class="stepper-step">
-                <div class="stepper-head" (click)="stepSelected($event)">
-                    <span class="stepper-head-icon"> 3 </span>
-                    <span class="stepper-head-text"> step3 </span>
-                </div>
-                <div class="stepper-content">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                </div>
-            </li>
-        </ul>
+        <ng-container *ngFor="let step of stepsArray">
+            <ul class="stepper" data-mdb-stepper="stepper" style="height: 160px;">
+                <li class="stepper-step stepper-active">
+                    <div class="stepper-head" [ngClass]="" (click)="stepSelected($event,1)">
+                        <span class="stepper-head-icon"> 1 </span>
+                        <span class="stepper-head-text"> Step 1 </span>
+                    </div>
+                    <div class="stepper-content" *ngIf="stepActive == 1">
+                        Step-1 content here
+                    </div>
+                </li>
+                <li class="stepper-step">
+                    <div class="stepper-head" (click)="stepSelected($event,2)">
+                        <span class="stepper-head-icon"> 2 </span>
+                        <span class="stepper-head-text"> Step 2 </span>
+                    </div>
+                    <div class="stepper-content" *ngIf="stepActive == 2">
+                        Step-2 content here
+                    </div>
+                </li>
+                <li class="stepper-step">
+                    <div class="stepper-head" (click)="stepSelected($event,3)">
+                        <span class="stepper-head-icon"> 3 </span>
+                        <span class="stepper-head-text"> Step 3 </span>
+                    </div>
+                    <div class="stepper-content" *ngIf="stepActive == 3">
+                        Step-3 content here
+                    </div>
+                </li>
+            </ul>
+        </ng-container>
     </div>
 </div>

@@ -1,7 +1,8 @@
-.stepper {
+.stepper:not(.stepper-vertical) {
   display: flex;
   justify-content: space-between;
-
+}
+.stepper {
   position: relative;
   padding: 0;
   margin: 0;
@@ -75,10 +76,6 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.stepper-active .stepper-content {
-  display: block;
-}
-
 .stepper-content {
   left: 0;
 }
@@ -89,4 +86,12 @@
 
 .stepper-active .stepper-head-icon {
   background-color: #0d6efd;
+}
+
+.stepper-active .stepper-head-text {
+  font-weight: 500;
+}
+
+.stepper-head:hover {
+  background-color: #dbdbdb;
 }
