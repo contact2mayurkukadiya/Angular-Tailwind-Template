@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faGift, faShareSquare, faUserLock } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login-form',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
+
+  userLockIcon = faUserLock;
+  shareIcon = faShareSquare;
 
   constructor() { }
 
