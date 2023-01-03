@@ -10,6 +10,7 @@ import { CommonComponentModule } from 'src/app/common/common-component.module';
 import { PartialsModule } from '../partials/partials.module';
 import { ButtonWidgetComponent } from './button-widget/button-widget.component';
 import { BadgeWidgetComponent } from './badge-widget/badge-widget.component';
+import { StepperWidgetComponent } from './stepper-widget/stepper-widget.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BadgeWidgetComponent } from './badge-widget/badge-widget.component';
     BreadcrumbWidgetComponent,
     ButtonWidgetComponent,
     BadgeWidgetComponent,
+    StepperWidgetComponent
   ],
   imports: [CommonModule, SharedModule, CommonComponentModule, PartialsModule],
   exports: [
