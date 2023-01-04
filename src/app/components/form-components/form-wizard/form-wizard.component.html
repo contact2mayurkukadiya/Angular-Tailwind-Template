@@ -14,22 +14,20 @@
         link
         within your website.</span>
     <div class="mt-2 text-center">
-        <ng-container *ngFor="let step of stepsArray">
-            <div class="p-4">
-                <ul class="stepper" data-mdb-stepper="stepper" style="height: 160px;" [id]="step.stepper_id">
-                    <li class="stepper-step" [ngClass]="item.step_state" [id]="item.step_id"
-                        *ngFor="let item of step.stepper_data">
-                        <div class="stepper-head" (click)="stepSelected(item,item.step_index)">
-                            <span class="stepper-head-icon"> {{item.step_index}} </span>
-                            <span class="stepper-head-text"> {{item.step_title}} </span>
-                        </div>
-                        <div class="stepper-content slide-in-left animation fast" [ngClass]="{}"
-                            [style.display]="stepActive == item.step_index ? 'block' : 'none'">
-                            {{item.step_title}} content here
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </ng-container>
+        <div class="p-4">
+            <app-stepper-widget [stepperData]="h_stepsArray"></app-stepper-widget>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 white-card">
+    <h1 class="card-title-text mt-0 mb-2">Vertical Card</h1>
+    <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+        link
+        within your website.</span>
+    <div class="mt-2 text-center">
+        <div class="p-4">
+            <app-stepper-widget [stepperData]="v_stepsArray"></app-stepper-widget>
+        </div>
     </div>
 </div>

@@ -31,7 +31,8 @@ import { StepperWidgetComponent } from './stepper-widget/stepper-widget.componen
     AccordionWidgetComponent,
     BreadcrumbWidgetComponent,
     ButtonWidgetComponent,
-    BadgeWidgetComponent
+    BadgeWidgetComponent,
+    StepperWidgetComponent
   ],
 })
 export class WidgetsModule {}
