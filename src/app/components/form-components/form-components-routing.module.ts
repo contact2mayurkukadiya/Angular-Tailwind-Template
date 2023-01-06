@@ -67,7 +67,7 @@ const routes: Routes = [
     component: FormMaskingComponent,
   },
   {
-    path: 'wizard',
+    path: 'stepper',
     component: FormWizardComponent,
   },
   {

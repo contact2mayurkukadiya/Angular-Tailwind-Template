@@ -1,29 +1,14 @@
-<ul class="stepper" data-mdb-stepper="stepper" style="height: 160px;" [id]="stepperData.stepper_id"
-    *ngIf="stepperData.stepper_type == 'horizontal'">
+<ul class="stepper" data-mdb-stepper="stepper" style="min-height: 110px;" [id]="stepperData.stepper_id"
+    [ngClass]="{'stepper-vertical' : stepperData.stepper_type == 'vertical'}">
     <li class="stepper-step" [ngClass]="item.step_state" [id]="item.step_id"
         *ngFor="let item of stepperData.steps_data">
         <div class="stepper-head" (click)="stepSelected(item,item.step_index)" [tabindex]="stepperData.step_index">
             <span class="stepper-head-icon"> {{item.step_index}} </span>
             <span class="stepper-head-text"> {{item.step_title}} </span>
         </div>
-        <div class="stepper-content slide-in-left animation fast" [ngClass]="{}"
+        <div class="stepper-content slide-in-left animation fast"
             [style.display]="stepActive == item.step_index ? 'block' : 'none'">
-            {{item.step_title}} content here
-        </div>
-    </li>
-</ul>
-
-<ul class="stepper stepper-vertical" data-mdb-stepper="stepper" data-mdb-stepper-type="vertical" style="height: 260px;"
-    [id]="stepperData.stepper_id" *ngIf="stepperData.stepper_type == 'vertical'">
-    <li class="stepper-step" [ngClass]="item.step_state" [id]="item.step_id"
-        *ngFor="let item of stepperData.steps_data">
-        <div class="stepper-head" (click)="stepSelected(item,item.step_index)" [tabindex]="stepperData.step_index">
-            <span class="stepper-head-icon"> {{item.step_index}} </span>
-            <span class="stepper-head-text"> {{item.step_title}} </span>
-        </div>
-        <div class="stepper-content slide-in-left animation fast" [ngClass]="{}"
-            [style.display]="stepActive == item.step_index ? 'block' : 'none'">
-            {{item.step_title}} content here
+            <ng-container [ngTemplateOutlet]="template"></ng-container>
         </div>
     </li>
 </ul>

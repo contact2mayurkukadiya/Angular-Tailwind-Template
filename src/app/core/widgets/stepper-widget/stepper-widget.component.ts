@@ -1,4 +1,15 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  SimpleChanges,
+  TemplateRef,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector: 'app-stepper-widget',
@@ -7,19 +18,26 @@ import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 })
 export class StepperWidgetComponent implements OnInit {
   @Input() stepperData: any;
-  stepActive: number = 1;
+  @Input() stepActive: number = 1;
+  @Output() stepActiveChange: EventEmitter<number> = new EventEmitter<number>();
   previousStep: number = 0;
+  @Input() template: TemplateRef<any>;
+  currentTemplate: TemplateRef<any>;
 
-  constructor() {}
+  constructor(private ref: ChangeDetectorRef) {}
 
-  ngOnInit(): void {
-    console.log('this.stepperData: ', this.stepperData);
-    // this.stepSelected(this.stepperData.steps_data[0],1);
-  }
+  ngOnInit(): void {}
 
   stepSelected(item, step_no) {
-    // this.previousStep = this.stepActive;
     this.stepActive = step_no;
+    this.stepActiveChange.emit(this.stepActive);
     document.getElementById(item.step_id)?.classList.add('stepper-active');
+  }
+
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    this.ref.detectChanges();
+    if (this.template !== undefined) this.currentTemplate = this.template;
   }
 }
