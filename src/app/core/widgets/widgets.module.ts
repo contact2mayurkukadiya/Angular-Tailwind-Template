@@ -10,7 +10,9 @@ import { CommonComponentModule } from 'src/app/common/common-component.module';
 import { PartialsModule } from '../partials/partials.module';
 import { ButtonWidgetComponent } from './button-widget/button-widget.component';
 import { BadgeWidgetComponent } from './badge-widget/badge-widget.component';
-import { StepperWidgetComponent } from './stepper-widget/stepper-widget.component';
+import { StepperWidgetComponent } from './stepper-widget/stepper-widget.component'; 
+import { AnimationWidgetComponent } from './animation-widget/animation-widget.component';
+import { StepperTabComponent } from './stepper-widget/stepper-tab/stepper-tab.component'; 
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { StepperWidgetComponent } from './stepper-widget/stepper-widget.componen
     BreadcrumbWidgetComponent,
     ButtonWidgetComponent,
     BadgeWidgetComponent,
-    StepperWidgetComponent
+    StepperWidgetComponent,
+    AnimationWidgetComponent,
+    StepperTabComponent
   ],
   imports: [CommonModule, SharedModule, CommonComponentModule, PartialsModule],
   exports: [
@@ -32,7 +36,9 @@ import { StepperWidgetComponent } from './stepper-widget/stepper-widget.componen
     BreadcrumbWidgetComponent,
     ButtonWidgetComponent,
     BadgeWidgetComponent,
-    StepperWidgetComponent
+    StepperWidgetComponent,
+    AnimationWidgetComponent,
+    StepperTabComponent
   ],
 })
 export class WidgetsModule {}

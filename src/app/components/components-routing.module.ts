@@ -68,10 +68,6 @@ const routes: Routes = [
     component: CardComponent,
   },
   {
-    path: 'form',
-    component: CardComponent,
-  },
-  {
     path: 'carousel',
     component: CarouselComponent,
   },

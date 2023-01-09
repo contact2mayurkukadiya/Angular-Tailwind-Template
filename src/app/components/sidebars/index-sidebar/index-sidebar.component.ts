@@ -8,6 +8,7 @@ import {
   faGripHorizontal,
   faCode,
   faHatWizard,
+  faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -141,6 +142,16 @@ export class IndexSidebarComponent implements OnInit {
             'flex items-center p-2 pl-11 w-full font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
       ],
+    },
+    {
+      id: 'dditem4',
+      item: 'Animations',
+      icon: faSpinner,
+      class:
+        'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+      route: '/ui-elements/animations',
     },
     { separator: true, text: 'Form Elements' },
     {

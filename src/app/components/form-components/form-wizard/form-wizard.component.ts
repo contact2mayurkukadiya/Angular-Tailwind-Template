@@ -73,6 +73,19 @@ export class FormWizardComponent implements OnInit {
   stepActive: number = 1;
   template: TemplateRef<any>;
 
+  step1Data: any = {
+    step_index: 1,
+    step_title: 'Step 1',
+  };
+  step2Data: any = {
+    step_index: 2,
+    step_title: 'Step 2',
+  };
+  step3Data: any = {
+    step_index: 3,
+    step_title: 'Step 3',
+  };
+
   constructor() {}
 
   ngOnInit(): void {}
