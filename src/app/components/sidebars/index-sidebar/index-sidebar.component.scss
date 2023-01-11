@@ -1,3 +1,15 @@
+::-webkit-scrollbar {
+  display: none !important;
+}
+
 .sidebar-separator {
-    @apply m-1 text-xs text-[#808080c9] font-semibold;
+  @apply m-1 text-xs text-[#808080c9] font-semibold;
+}
+
+.active {
+  background-color: rgb(243 244 246);
+}
+
+.de-active {
+  background-color: transparent;
 }

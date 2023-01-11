@@ -12,7 +12,7 @@ export class ComponentComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    console.log('listJSON: ', this.data.list_data);
+    // console.log('listJSON: ', this.data.list_data);
   }
 
   openComp(item) {

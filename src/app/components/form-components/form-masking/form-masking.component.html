@@ -1,0 +1,242 @@
+<div class="white-card">
+    <div class="flex">
+        <div>
+            <i class="icofont icofont-chart-bar-graph bg-c-blue"></i>
+        </div>
+        <h6 class="mt-0 mb-2 page-title-text">Form Masking</h6>
+    </div>
+    <span class="description-text">Use these default button styles with multiple colors to indicate an action or link
+        within your website.</span>
+</div>
+
+<div class="mt-4">
+    <div class="grid grid-cols-2 gap-2">
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Date</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <form [formGroup]="form">
+                <div class="form-group inline-flex items-center">
+                    <label for="date-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Date
+                        Format-1</label>
+                    <input type="text" placeholder="Date" mask="00/00/0000"
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="date-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Date
+                        Format-2</label>
+                    <input type="text" placeholder="Date" mask="00-00-0000"
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+            </form>
+        </div>
+
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Time</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <form [formGroup]="form">
+                <div class="form-group inline-flex items-center">
+                    <label for="date-and-hour" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Date &
+                        Hour</label>
+                    <input type="text" placeholder="Phone Number" mask="00/00/00 00:00:00"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ml-4"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="hour"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Hour</label>
+                    <input type="text" placeholder="Phone Number" mask="00:00:00"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ml-4"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="24-hour" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Valid
+                        24 hour format</label>
+                    <input type="text" placeholder="Phone Number" mask="Hh:m0:s0"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ml-4"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+            </form>
+        </div>
+
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Phone Number</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <form [formGroup]="form">
+                <div class="form-group inline-flex items-center">
+                    <label for="mobile-number"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mobile
+                        Number</label>
+                    <input type="text" placeholder="Phone Number" mask="0000-000-000"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" [showMaskTyped]="true" />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="telephone"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Telephone</label>
+                    <input type="text" placeholder="Phone Number" mask="0000-0000"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" [showMaskTyped]="true" />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="telephone-code"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tel with code</label>
+                    <input type="text" placeholder="Phone Number" mask="(00)-0000 0000"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" [showMaskTyped]="true" />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="us-telephone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">US
+                        Telephone</label>
+                    <input type="text" placeholder="Phone Number" mask="(000) 000-0000"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" [showMaskTyped]="true" />
+                </div>
+            </form>
+        </div>
+
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Network</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <form [formGroup]="form">
+                <div class="form-group inline-flex items-center">
+                    <label for="ip-address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">IP
+                        Address</label>
+                    <input type="text" placeholder="IP address" mask="000.000.000.000"
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="ip-address"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">IPV4</label>
+                    <input type="text" placeholder="IP address" mask="000.000.000.0000"
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="ip-address"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">IPV6</label>
+                    <input type="text" placeholder="IP address" mask="0000:0000:0000:0:000:0000:0000:0000"
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput [showMaskTyped]="true" />
+                </div>
+            </form>
+        </div>
+
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Currency</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <form [formGroup]="form">
+                <div class="form-group inline-flex items-center">
+                    <label for="rupee" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Rupee
+                        (₹)</label>
+                    <input type="text" placeholder="₹" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput prefix="₹ " />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="dollar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dollar
+                        ($)</label>
+                    <input type="text" placeholder="$" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput prefix="$ " />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="euro" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Euro
+                        (€)</label>
+                    <input type="text" placeholder="€" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput prefix="€ " />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="renminbi"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Renminbi (¥)</label>
+                    <input type="text" placeholder="¥" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput prefix="¥ " />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="pound" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pound
+                        (£)</label>
+                    <input type="text" placeholder="£" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" matInput prefix="£ " />
+                </div>
+            </form>
+        </div>
+
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Numbers</h1>
+            <span class="description-text">Use these default button styles with multiple colors to indicate an action or
+                link
+                within your website.</span>
+            <form [formGroup]="form">
+                <div class="form-group inline-flex items-center">
+                    <label for="thousand-separator"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Thousand
+                        separator</label>
+                    <input type="text" placeholder="Thousand separator" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="aut-numeric"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Auto Numeric (%)</label>
+                    <input type="text" placeholder="%" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" suffix=" %" />
+                </div>
+
+                <!--  <div class="form-group inline-flex items-center mt-4">
+                    <label for="max-value"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Maximum Value (0 -
+                        9999)</label>
+                    <input type="text" placeholder="Thousand separator" mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" max="9999" />
+                </div> -->
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="range-value"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Drop special
+                        characters</label>
+                    <input type="text" placeholder="Drop special characters" [dropSpecialCharacters]="true"
+                        mask="separator" thousandSeparator=","
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" />
+                </div>
+
+                <div class="form-group inline-flex items-center mt-4">
+                    <label for="bracket-value"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Allow negative</label>
+                    <input type="text" placeholder="Negative value" [allowNegativeNumbers]="true" mask="separator.2"
+                        class="ml-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        formControlName="ShadowDomMaskTyped" id="ShadowDomMaskTyped" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

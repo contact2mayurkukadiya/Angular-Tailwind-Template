@@ -1,0 +1,10 @@
+<li class="stepper-step" [ngClass]="{'stepper-active' : stepActive == stepData.step_index}">
+    <div class="stepper-head" (click)="activeStepChanged(stepData.step_index)">
+        <span class="stepper-head-icon"> {{stepData.step_index}} </span>
+        <span class="stepper-head-text ml-1"> {{stepData.step_title}} </span>
+    </div>
+    <div class="stepper-content slide-in-left animation fast">
+        <!-- [style.display]="stepActive == stepData.step_index ? 'block' : 'none'" -->
+        <ng-content></ng-content>
+    </div>
+</li>

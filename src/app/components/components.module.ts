@@ -12,9 +12,23 @@ import { IndexBreadcrumbComponent } from './breadcrumbs/index-breadcrumb/index-b
 import { AccordianComponent } from './accordian/accordian.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { SharedModule } from '../shared/shared/shared.module';
-import Alpine from 'alpinejs'
- 
-Alpine.start()
+import Alpine from 'alpinejs';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { AlertsComponent } from './alerts/alerts.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { BadgeComponent } from './badge/badge.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { PopoverComponent } from './popover/popover.component';
+import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { ListComponent } from './list/list.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonComponentModule } from '../common/common-component.module';
+import { PartialsModule } from '../core/partials/partials.module';
+
+Alpine.start();
 @NgModule({
   declarations: [
     IndexNavbarComponent,
@@ -24,18 +38,32 @@ Alpine.start()
     ButtonComponent,
     IndexBreadcrumbComponent,
     AccordianComponent,
+    BreadcrumbComponent,
+    AlertsComponent,
+    TooltipComponent,
+    BadgeComponent,
+    ProgressBarComponent,
+    PopoverComponent,
+    CardComponent,
+    CarouselComponent,
+    DropdownComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
     ComponentsRoutingModule,
     WidgetsModule,
     HighlightModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonComponentModule,
+    PartialsModule,
   ],
   exports: [
     IndexNavbarComponent,
     IndexSidebarComponent,
-    IndexBreadcrumbComponent,
+    IndexBreadcrumbComponent
   ],
 })
 export class ComponentsModule {}

@@ -5,109 +5,219 @@
     </div>
     <h6 class="mt-0 mb-2 page-title-text">Accordian</h6>
   </div>
+  <span class="description-text">The accordion component is a collection of vertically collapsing header and body elements that can be used to show and hide information based on the Tailwind CSS utility classes and JavaScript from Flowbite.</span>
+  <span class="description-text">A popular use case would be the “Frequently Asked Questions” section of a website or page when you can show questions and answers for each child element.</span>
 </div>
 
-<div class="white-card mt-4">
-  <div class="flex flex-col p-4">
-    <!--  <div x-data="{
-      open: false,
-      toggle() {
-          if (this.open) {
-              return this.close()
-          }
-  
-          this.$refs.button.focus()
-  
-          this.open = true
-      },
-      close(focusAfter) {
-          if (! this.open) return
-  
-          this.open = false
-  
-          focusAfter && focusAfter.focus()
-      }
-  }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-      x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-      class="relative">
-      <button
-        class="accordion-button flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
-        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-        aria-controls="flush-collapseOne" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-        x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')">
-        <p>Container 1</p>
-        <span ngClass="{{open ? 'fa-chevron-down' : 'fa-chevron-up'}}" class="fas"></span>
-      </button>
-      <div x-ref="panel" x-show="open" :id="$id('dropdown-button')" style="display: none"
-        class="accordion-collapse border-0 collapse show transition-all" aria-labelledby="flush-headingOne"
-        data-bs-parent="#accordionFlushExample">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius vel magna lacinia mollis. Class aptent
-        taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ligula neque, imperdiet
-        nec est laoreet, pulvinar commodo odio. Vivamus eget eleifend libero. Fusce dolor nibh, porta eu gravida ut,
-        maximus non erat.
-      </div>
-    </div> -->
+<div class="mt-4">
+  <div class="grid grid-cols-2 gap-2">
 
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item bg-white border border-gray-200">
-        <div x-data="{
-          open: false,
-          toggle() {
-              if (this.open) {
-                  return this.close()
-              }
-      
-              this.$refs.button.focus()
-      
-              this.open = true
-          },
-          close(focusAfter) {
-              if (! this.open) return
-      
-              this.open = false
-      
-              focusAfter && focusAfter.focus()
-          }
-      }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-          x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-          class="relative">
-          <h2 class="accordion-header mb-0" id="headingOne">
-            <button class="
-              accordion-button
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none card-title-text
-            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-              aria-controls="collapseOne" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-              aria-expanded="false" aria-controls="flush-collapseOne" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-              aria-expanded="false" x-ref="button" x-on:click="toggle()" :aria-expanded="open"
-              :aria-controls="$id('dropdown-button')">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample" x-ref="panel" x-show="open" :id="$id('dropdown-button')"
-            style="display: none">
-            <div class="card-title-text accordion-body py-4 px-5">
-              <strong>This is the first item's accordion body.</strong> It is shown by default,
-              until the collapse plugin adds the appropriate classes that we use to style each
-              element. These classes control the overall appearance, as well as the showing and
-              hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-              our default variables. It's also worth noting that just about any HTML can go within
-              the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
+    <!-- Default accordion -->
+    <div class="white-card">
+      <div class="flex flex-col p-4">
+        <h1 class="card-title-text mt-0 mb-2">Default Accordion</h1>
+        <span class="description-text">Use the data-accordion="collapse" to collapse every other child element when
+          expanding a single one.</span>
+        <app-accordion-widget [data]="accordion1Data[0]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+        <app-accordion-widget [data]="accordion1Data[1]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to get started
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+      </div>
+    </div>
+
+    <!-- Default open -->
+    <div class="white-card">
+      <div class="flex flex-col p-4">
+        <h1 class="card-title-text mt-0 mb-2">Always open</h1>
+        <span class="description-text">Use the data-accordion="open" option to keep previously opened accordion elements
+          unchanged..</span>
+        <app-accordion-widget [data]="accordion2Data[0]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+
+        <app-accordion-widget [data]="accordion2Data[1]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+      </div>
+    </div>
+
+    <!-- Arrow style -->
+    <div class="white-card">
+      <div class="flex flex-col p-4">
+        <h1 class="card-title-text mt-0 mb-2">Arrow Style</h1>
+        <span class="description-text">Use the data-accordion-icon data attribute to optionally set an element to rotate
+          180 degrees when the accordion element is expanded. If the data attribute is not set, then it will not
+          rotate.</span>
+        <app-accordion-widget [data]="accordion5Data[2]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+
+        <app-accordion-widget [data]="accordion5Data[1]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+      </div>
+    </div>
+
+    <!-- Flush Accordion -->
+    <div class="white-card">
+      <div class="flex flex-col p-4">
+        <h1 class="card-title-text mt-0 mb-2">Flush Accordion</h1>
+        <span class="description-text">Use this example to remove the background color and rounded borders from the
+          accordion component.</span>
+        <app-accordion-widget [data]="accordion4Data[0]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+
+        <app-accordion-widget [data]="accordion4Data[1]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+      </div>
+    </div>
+
+    <!-- Color Accordion -->
+    <div class="white-card">
+      <div class="flex flex-col p-4">
+        <h1 class="card-title-text mt-0 mb-2">Color Accordion</h1>
+        <span class="description-text">Use the data-active-classes and data-inactive-classes to set the active and
+          inactive classes for the header element whenever the accordion is expanded by applying as many classes as you
+          want, but make sure to separate them with a space. If the data attribute is not set or empty, it will apply
+          the default classes.
+          Here’s an example where we apply the blue colors instead of gray:</span>
+        <app-accordion-widget [data]="accordion3Data[0]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
+
+        <app-accordion-widget [data]="accordion3Data[1]">
+          <p class="mb-2 text-gray-500 dark:text-gray-400 content-description-text">
+            Flowbite is an open-source library of interactive components
+            built on top of Tailwind CSS including buttons, dropdowns,
+            modals, navbars, and more.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 content-description-text">
+            Check out this guide to learn how to
+            <a class="text-blue-600 hover:underline dark:text-blue-500"
+              href="https://flowbite.com/docs/getting-started/introduction/">
+              get started
+            </a>
+            and start developing websites even faster with components on top
+            of Tailwind CSS.
+          </p>
+        </app-accordion-widget>
       </div>
     </div>
   </div>
-</div>

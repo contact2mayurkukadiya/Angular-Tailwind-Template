@@ -1,0 +1,24 @@
+<ng-container *ngFor="let menuItem of menu">
+
+    <button type="button" id="{{menuItem.id}}" data-bs-toggle="dropdown" aria-expanded="false"
+        *ngIf="!menuItem.menuSubItem" (click)="menuItem.menuSubItem ? toggle() : redirect(menuItem)"
+        [ngClass]="{ 'active' : menuItem.selected}" [class]="menuItem.class">
+        <fa-icon *ngIf="menuItem?.icon" [icon]="menuItem?.icon"></fa-icon>
+        <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass"
+            sidebar-toggle-item="">{{menuItem.item}}</a>
+    </button>
+
+    <button type="button" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example" id="{{menuItem.id}}"
+        data-bs-toggle="dropdown" aria-expanded="false" *ngIf="menuItem.menuSubItem"
+        (click)="menuItem.menuSubItem ? toggle() : redirect(menuItem.route)" [ngClass]="menuItem.class">
+        <fa-icon *ngIf="menuItem?.icon" [icon]="menuItem?.icon"></fa-icon>
+        <a class="flex-1 ml-3 text-left whitespace-nowrap" [class]="menuItem?.fontClass"
+            sidebar-toggle-item="">{{menuItem.item}}</a>
+    </button>
+    <ul *ngIf="Show" aria-labelledby="dropdownMenuButton1" [ngClass]="menuItem.ulClass">
+        <li *ngFor="let item of menuItem.menuSubItem">
+            <a href="{{item.route}}" [ngClass]="item.subItemClass">{{item.name}}</a>
+        </li>
+    </ul>
+
+</ng-container>

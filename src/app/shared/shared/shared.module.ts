@@ -6,7 +6,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, HighlightPlusModule, ClipboardModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    HighlightPlusModule,
+    ClipboardModule,
+    FontAwesomeModule
+  ],
   exports: [HighlightPlusModule, FontAwesomeModule],
 })
 export class SharedModule {}

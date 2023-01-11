@@ -6,7 +6,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "~highlight.js/styles/github.css";
+// @import "~highlight.js/styles/github.css";
 
 // @apply px-6 py-4 rounded overflow-hidden shadow-lg hover:shadow-[#00000082] dark:hover:shadow-black shadow-[#00000047] dark:shadow-[#0000008c] bg-white dark:bg-slate-800 m-4 min-w-full min-h-full
 .white-card {
@@ -14,13 +14,65 @@
 }
 
 .description-text {
-  @apply text-xs text-[#919aa3];
+  @apply text-sm text-[#919aa3];
 }
 
 .page-title-text {
-  @apply text-lg text-[#303548] font-semibold;
+  @apply text-xl text-[#303548] font-semibold;
 }
 
 .card-title-text {
-  @apply text-sm text-[#505458] font-semibold;
+  @apply text-xl text-[#505458] font-semibold;
+}
+
+.content-title-text {
+  @apply text-base;
+}
+
+.content-description-text {
+  @apply text-sm;
+}
+
+.default {
+  background-color: rgb(145, 154, 163);
+}
+
+.warning {
+  background-color: rgb(255, 182, 77);
+}
+
+.danger {
+  background-color: rgb(252, 97, 128);
+}
+
+.success {
+  background-color: rgb(147, 190, 82);
+}
+
+.info {
+  background-color: rgb(98, 209, 243);
+}
+
+.sidebar-menu-item-selected {
+  background-color: rgb(243 244 246 / var(1));
+}
+
+.divider-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(1.5rem * var(0));
+  margin-top: calc(1.5rem * (1 - var(0)));
+}
+
+.divider-center-text {
+  color: rgb(107 114 128 / var(1));
+  text-align: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.divider-line {
+  background-color: rgb(229 231 235);
+  height: 0.125rem;
+  width: 100%;
 }
