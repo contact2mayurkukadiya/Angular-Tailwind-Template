@@ -16,14 +16,14 @@
     <div class="mt-2 text-center">
         <div class="p-4">
             <stepper [stepElement]="'horizontal'">
-                <stepper-tab [stepData]="step1Data" [stepActive]="stepActive" (stepChanged)="stepChanged($event)">
+                <stepper-tab [stepData]="step1Data">
                     <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
                 </stepper-tab>
-                <stepper-tab [stepData]="step2Data" [stepActive]="stepActive" (stepChanged)="stepChanged($event)">
-                    <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
+                <stepper-tab [stepData]="step2Data">
+                    <ng-container [ngTemplateOutlet]="textTemp"></ng-container>
                 </stepper-tab>
-                <stepper-tab [stepData]="step3Data" [stepActive]="stepActive" (stepChanged)="stepChanged($event)">
-                    <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
+                <stepper-tab [stepData]="step3Data">
+                    <ng-container [ngTemplateOutlet]="btnTemp"></ng-container>
                 </stepper-tab>
             </stepper>
         </div>
@@ -69,4 +69,12 @@
             Next Step: Payment Info
         </button>
     </form>
+</ng-template>
+
+<ng-template #textTemp>
+    <p>Text goes here</p>
+</ng-template>
+
+<ng-template #btnTemp>
+    <app-button-widget>Default</app-button-widget>
 </ng-template>

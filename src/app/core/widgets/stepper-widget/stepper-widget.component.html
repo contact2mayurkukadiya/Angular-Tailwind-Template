@@ -1,3 +1,12 @@
-<ul class="stepper" data-mdb-stepper="stepper" [ngClass]="{'stepper-vertical' : stepElement == 'vertical'}">
-    <ng-content></ng-content>
+<ul class="stepper" data-mdb-stepper="stepper"
+    [ngClass]="{'stepper-vertical' : stepElement == 'vertical', 'stepper-active': stepActive?.stepData?.step_index == activeStepIndex}">
+    <ng-container *ngFor="let item of childrenArray">
+        <li class="stepper-step" (click)="addStepData(item);">
+            <div class="stepper-head">
+                <span class="stepper-head-icon">{{item?.stepData?.step_index}}</span>
+                <span class="stepper-head-text ml-1">{{item?.stepData?.step_title}}</span>
+            </div>
+        </li>
+    </ng-container>
 </ul>
+<ng-content></ng-content>
