@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormReadyToUseComponent } from './form-ready-to-use.component';
+import { AnimationsComponent } from './animations.component';
 
-describe('FormReadyToUseComponent', () => {
-  let component: FormReadyToUseComponent;
-  let fixture: ComponentFixture<FormReadyToUseComponent>;
+describe('AnimationsComponent', () => {
+  let component: AnimationsComponent;
+  let fixture: ComponentFixture<AnimationsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormReadyToUseComponent ]
+      declarations: [ AnimationsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FormReadyToUseComponent);
+    fixture = TestBed.createComponent(AnimationsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

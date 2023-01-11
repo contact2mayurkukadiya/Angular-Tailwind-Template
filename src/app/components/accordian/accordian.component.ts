@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-accordian',
@@ -6,27 +7,148 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accordian.component.scss'],
 })
 export class AccordianComponent implements OnInit {
-  open: any = false;
-  show: boolean = false;
-  accordionData: any = {
-    id: 'acc1',
-    h2ID: 'h12',
-    divID: 'acc1div',
-    buttonTitle: 'Accordion Item #1',
-    normalText:
-      ' It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing andchiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It is also worth noting that just about any HTML can go within hough the transition does limit overflow.',
-    buttonClass:
-      ' accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none card-title-text',
-    strongText: `This is the first item's accordion body.`,
-    codeText: `.accordion-body.`,
-    childClass: '',
-  };
+  accordion1Data: any = [
+    {
+      id: 'accordion-collapse',
+      buttonTitle: 'This is default Accordion',
+      header_id: 'accordion-collapse-heading-1',
+      body_id: 'accordion-collapse-body-1',
+      displayArrow: true,
+      open: true,
+    },
+    {
+      id: 'accordion-collapse',
+      buttonTitle: 'How about this one?',
+      header_id: 'accordion-collapse-heading-2',
+      body_id: 'accordion-collapse-body-2',
+      displayArrow: true,
+      open: false,
+    },
+    {
+      id: 'accordion-collapse',
+      buttonTitle: 'Try me..?',
+      header_id: 'accordion-collapse-heading-3',
+      body_id: 'accordion-collapse-body-3',
+      displayArrow: true,
+      open: false,
+    },
+  ];
+
+  accordion2Data: any = [
+    {
+      id: 'accordion-open',
+      buttonTitle: 'This is default Accordion',
+      header_id: 'accordion-open-heading-1',
+      body_id: 'accordion-open-body-1',
+      icon: faCircleQuestion,
+      displayArrow: true,
+      open: true,
+    },
+    {
+      id: 'accordion-open',
+      buttonTitle: 'How about this one?',
+      header_id: 'accordion-open-heading-2',
+      body_id: 'accordion-open-body-2',
+      icon: faCircleQuestion,
+      displayArrow: true,
+      open: true,
+    },
+    {
+      id: 'accordion-open',
+      buttonTitle: 'Try me..?',
+      header_id: 'accordion-open-heading-3',
+      body_id: 'accordion-open-body-3',
+      icon: faCircleQuestion,
+      displayArrow: true,
+    },
+  ];
+
+  accordion3Data: any = [
+    {
+      id: 'accordion-color',
+      buttonTitle: 'This is default Accordion',
+      header_id: 'accordion-color-heading-1',
+      body_id: 'accordion-color-body-1',
+      displayArrow: true,
+      color:true
+    },
+    {
+      id: 'accordion-color',
+      buttonTitle: 'How about this one?',
+      header_id: 'accordion-color-heading-2',
+      body_id: 'accordion-color-body-2',
+      displayArrow: true,
+      color:true
+    },
+    {
+      id: 'accordion-color',
+      buttonTitle: 'Try me..?',
+      header_id: 'accordion-color-heading-3',
+      body_id: 'accordion-color-body-3',
+      displayArrow: true,
+      color:true
+    },
+  ];
+
+  accordion4Data: any = [
+    {
+      id: 'accordion-flush',
+      buttonTitle: 'This is default Accordion',
+      header_id: 'accordion-flush-heading-1',
+      body_id: 'accordion-flush-body-1',
+      btnClass:
+        'flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400',
+      displayArrow: true,
+      flush : true
+    },
+    {
+      id: 'accordion-flush',
+      buttonTitle: 'How about this one?',
+      header_id: 'accordion-flush-heading-2',
+      body_id: 'accordion-flush-body-2',
+      btnClass:
+        'flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400',
+      displayArrow: true,
+      flush : true
+    },
+    {
+      id: 'accordion-flush',
+      buttonTitle: 'Try me..?',
+      header_id: 'accordion-flush-heading-3',
+      body_id: 'accordion-flush-body-3',
+      btnClass:
+        'flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400',
+      displayArrow: true,
+    },
+  ];
+
+  accordion5Data: any = [
+    {
+      id: 'accordion-arrow-icon',
+      buttonTitle: 'This is default Accordion',
+      header_id: 'accordion-arrow-icon-heading-1',
+      body_id: 'accordion-arrow-icon-body-1',
+      displayArrow: true,
+    },
+    {
+      id: 'accordion-arrow-icon',
+      buttonTitle: 'How about this one?',
+      header_id: 'accordion-arrow-icon-heading-2',
+      body_id: 'accordion-arrow-icon-body-2',
+      sameArrow: true,
+      displayArrow: true
+    },
+    {
+      id: 'accordion-arrow-icon',
+      buttonTitle: 'Try me..?',
+      header_id: 'accordion-arrow-icon-heading-3',
+      body_id: 'accordion-arrow-icon-body-3',
+      circleArrow: true,
+      displayArrow: true
+    },
+  ];
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  toggle() {
-    this.show = !this.show;
-  }
 }

@@ -1,16 +1,14 @@
-<div class="accordion" id="{{data?.id}}">
-    <div class="accordion-item bg-white border border-gray-200">
-        <h2 class="accordion-header mb-0" id="{{data?.id}}">
-            <button class="" [ngClass]="data?.buttonClass" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" type="button"
-                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-                aria-controls="flush-collapseOne" (click)="toggle()">
-                {{data?.buttonTitle}}
-            </button>
-        </h2>
-        <div id="{{data?.divID}}" *ngIf="show" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <ng-content></ng-content>
-        </div>
-    </div>
-</div>
+<flowbite-demo-page>
+    <flowbite-demo-example title="Default accordion" codeClassName="dark:!bg-gray-900 divide-y">
+        <flowbite-accordion [flush]="data?.flush">
+            <flowbite-accordion-panel [open]="data.open">
+                <flowbite-accordion-title [data]="data" class="content-title-text">
+                    {{data.buttonTitle}}
+                </flowbite-accordion-title>
+                <flowbite-accordion-content>
+                    <ng-content></ng-content>
+                </flowbite-accordion-content>
+            </flowbite-accordion-panel>
+        </flowbite-accordion>
+    </flowbite-demo-example>
+</flowbite-demo-page>

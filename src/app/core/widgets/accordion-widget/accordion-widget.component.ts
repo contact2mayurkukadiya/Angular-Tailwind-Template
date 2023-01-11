@@ -7,12 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AccordionWidgetComponent implements OnInit {
   @Input() data: any;
-  show: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
-
-  toggle() {
-    this.show = !this.show;
-  }
 }

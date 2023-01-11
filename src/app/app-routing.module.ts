@@ -26,6 +26,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/views.module').then((m) => m.ViewsModule),
       },
+      {
+        path: 'ui-elements',
+        loadChildren: () =>
+          import('./components/ui-elements/ui-elements.module').then(
+            (m) => m.UiElementsModule
+          ),
+      },
     ],
   },
 ];

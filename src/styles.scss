@@ -14,15 +14,23 @@
 }
 
 .description-text {
-  @apply text-xs text-[#919aa3];
+  @apply text-sm text-[#919aa3];
 }
 
 .page-title-text {
-  @apply text-lg text-[#303548] font-semibold;
+  @apply text-xl text-[#303548] font-semibold;
 }
 
 .card-title-text {
-  @apply text-sm text-[#505458] font-semibold;
+  @apply text-xl text-[#505458] font-semibold;
+}
+
+.content-title-text {
+  @apply text-base;
+}
+
+.content-description-text {
+  @apply text-sm;
 }
 
 .default {
@@ -47,4 +55,24 @@
 
 .sidebar-menu-item-selected {
   background-color: rgb(243 244 246 / var(1));
+}
+
+.divider-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(1.5rem * var(0));
+  margin-top: calc(1.5rem * (1 - var(0)));
+}
+
+.divider-center-text {
+  color: rgb(107 114 128 / var(1));
+  text-align: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.divider-line {
+  background-color: rgb(229 231 235);
+  height: 0.125rem;
+  width: 100%;
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Tooltip } from 'chart.js';
+import { AccordionComponent } from '../core/partials/accordion';
 import { AccordianComponent } from './accordian/accordian.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { BadgeComponent } from './badge/badge.component';
@@ -64,10 +65,6 @@ const routes: Routes = [
   },
   {
     path: 'card',
-    component: CardComponent,
-  },
-  {
-    path: 'form',
     component: CardComponent,
   },
   {
