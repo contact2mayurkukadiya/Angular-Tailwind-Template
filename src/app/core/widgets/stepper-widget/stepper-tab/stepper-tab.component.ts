@@ -8,14 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class StepperTabComponent implements OnInit {
   @Input() stepData;
   @Input() stepActive;
+  @Output() stepChanged = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  stepSelected() {
-    // this.stepActive = step_no;
-    // this.stepActiveChange.emit(this.stepActive);
-    // document.getElementById(item.step_id)?.classList.add('stepper-active');
+  activeStepChanged(step_no) {
+    this.stepChanged.emit(step_no);
   }
 }

@@ -16,13 +16,13 @@
     <div class="mt-2 text-center">
         <div class="p-4">
             <stepper [stepElement]="'horizontal'">
-                <stepper-tab [stepData]="step1Data" [stepActive]="stepActive">
+                <stepper-tab [stepData]="step1Data" [stepActive]="stepActive" (stepChanged)="stepChanged($event)">
                     <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
                 </stepper-tab>
-                <stepper-tab [stepData]="step2Data" [stepActive]="stepActive">
+                <stepper-tab [stepData]="step2Data" [stepActive]="stepActive" (stepChanged)="stepChanged($event)">
                     <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
                 </stepper-tab>
-                <stepper-tab [stepData]="step3Data" [stepActive]="stepActive">
+                <stepper-tab [stepData]="step3Data" [stepActive]="stepActive" (stepChanged)="stepChanged($event)">
                     <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
                 </stepper-tab>
             </stepper>
