@@ -9,27 +9,123 @@
 </div>
 
 <div class="mt-4 white-card">
-    <h1 class="card-title-text mt-0 mb-2">Horizontal Card</h1>
+    <h1 class="card-title-text mt-0 mb-2">Default Stepper</h1>
     <span class="description-text">Use these default button styles with multiple colors to indicate an action or
         link
         within your website.</span>
     <div class="mt-2 text-center">
         <div class="p-4">
-            <stepper [stepElement]="'horizontal'">
-                <stepper-tab [stepData]="step1Data">
+            <stepper [stepper_type]="default_stepper?.stepper_type" (stepChanged)="stepChanged($event)"
+                (nextStep)="nextStep($event)" (previousStep)="previousStep($event)"
+                [stepper_connector_class]="default_stepper?.stepper_connector_class">
+                <stepper-tab [stepData]="default_stepper?.stepper_tabs[0]">
                     <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
                 </stepper-tab>
-                <stepper-tab [stepData]="step2Data">
-                    <ng-container [ngTemplateOutlet]="textTemp"></ng-container>
-                </stepper-tab>
-                <stepper-tab [stepData]="step3Data">
+                <stepper-tab [stepData]="default_stepper?.stepper_tabs[1]">
                     <ng-container [ngTemplateOutlet]="btnTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="default_stepper?.stepper_tabs[2]">
+                    <ng-container [ngTemplateOutlet]="textTemp"></ng-container>
                 </stepper-tab>
             </stepper>
         </div>
     </div>
 </div>
 
+<!-- Progress stepper -->
+<div class="mt-4 white-card">
+    <h1 class="card-title-text mt-0 mb-2">Progress Stepper</h1>
+    <span class="description-text">Use these Progress button styles with multiple colors to indicate an action or
+        link
+        within your website.</span>
+    <div class="mt-2 text-center">
+        <div class="p-4">
+            <stepper [stepper_type]="progress_stepper?.stepper_type" (stepChanged)="stepChanged($event)"
+                (nextStep)="nextStep($event)" (previousStep)="previousStep($event)"
+                [stepper_navigation__buttons]="progress_stepper?.stepper_navigation__buttons"
+                [stepper_connector_class]="progress_stepper?.stepper_connector_class">
+                <stepper-tab [stepData]="progress_stepper?.stepper_tabs[0]" [tab_active_template]="tab_template_active"
+                    [tab_template]="true" [tab_completed_template]="tab_template_completed"
+                    [tab_untouched_template]="tab_template_untouched">
+                    <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="progress_stepper?.stepper_tabs[1]" [tab_active_template]="tab_template_active"
+                    [tab_template]="true" [tab_completed_template]="tab_template_completed"
+                    [tab_untouched_template]="tab_template_untouched">
+                    <ng-container [ngTemplateOutlet]="btnTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="progress_stepper?.stepper_tabs[2]" [tab_active_template]="tab_template_active"
+                    [tab_template]="true" [tab_completed_template]="tab_template_completed"
+                    [tab_untouched_template]="tab_template_untouched">
+                    <ng-container [ngTemplateOutlet]="textTemp"></ng-container>
+                </stepper-tab>
+            </stepper>
+        </div>
+    </div>
+</div>
+
+<!-- Detailed stepper -->
+<div class="mt-4 white-card">
+    <h1 class="card-title-text mt-0 mb-2">Detailed stepper</h1>
+    <span class="description-text">Use these Detailed stepper styles with multiple colors to indicate an action or
+        link
+        within your website.</span>
+    <div class="mt-2 text-center">
+        <div class="p-4">
+            <stepper [stepper_type]="detailed_stepper?.stepper_type" (stepChanged)="stepChanged($event)"
+                (nextStep)="nextStep($event)" (previousStep)="previousStep($event)"
+                [stepper_connector_class]="detailed_stepper?.stepper_connector_class">
+                <stepper-tab [stepData]="detailed_stepper?.stepper_tabs[0]">
+                    <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="detailed_stepper?.stepper_tabs[1]">
+                    <ng-container [ngTemplateOutlet]="btnTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="detailed_stepper?.stepper_tabs[2]">
+                    <ng-container [ngTemplateOutlet]="textTemp"></ng-container>
+                </stepper-tab>
+            </stepper>
+        </div>
+    </div>
+</div>
+
+<!-- Timeline stepper -->
+<div class="mt-4 white-card">
+    <h1 class="card-title-text mt-0 mb-2">Timeline stepper</h1>
+    <span class="description-text">Use these Timeline stepper styles with multiple colors to indicate an action or
+        link
+        within your website.</span>
+    <div class="mt-2 text-center">
+        <div class="p-4">
+            <stepper [stepper_type]="timeline_stepper?.stepper_type" (stepChanged)="stepChanged($event)"
+                (nextStep)="nextStep($event)" (previousStep)="previousStep($event)"
+                [stepper_connector_class]="timeline_stepper?.stepper_connector_class">
+                <stepper-tab [stepData]="timeline_stepper?.stepper_tabs[0]" [tab_active_template]="tab_template_active"
+                    [tab_template]="true" [tab_completed_template]="tab_template_completed"
+                    [tab_untouched_template]="tab_template_untouched">
+                    <ng-container [ngTemplateOutlet]="formTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="timeline_stepper?.stepper_tabs[1]" [tab_active_template]="tab_template_active"
+                    [tab_template]="true" [tab_completed_template]="tab_template_completed"
+                    [tab_untouched_template]="tab_template_untouched">
+                    <ng-container [ngTemplateOutlet]="btnTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="timeline_stepper?.stepper_tabs[2]" [tab_active_template]="tab_template_active"
+                    [tab_template]="true" [tab_completed_template]="tab_template_completed"
+                    [tab_untouched_template]="tab_template_untouched">
+                    <ng-container [ngTemplateOutlet]="textTemp"></ng-container>
+                </stepper-tab>
+                <stepper-tab [stepData]="timeline_stepper?.stepper_tabs[3]" [tab_active_template]="tab_template_active"
+                    [tab_template]="true" [tab_completed_template]="tab_template_completed"
+                    [tab_untouched_template]="tab_template_untouched">
+                    <ng-container [ngTemplateOutlet]="textTemp"></ng-container>
+                </stepper-tab>
+            </stepper>
+        </div>
+    </div>
+</div>
+
+<!-- Form template -->
 <ng-template #formTemp>
     <form action="#">
         <h3 class="mb-4 text-lg font-medium leading-none text-gray-900 dark:text-white">Invoice details
@@ -64,17 +160,85 @@
                     placeholder="•••••••••" required="">
             </div>
         </div>
-        <button type="submit"
+        <button type="submit" (click)="stepperWidget.next();"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Next Step: Payment Info
         </button>
     </form>
 </ng-template>
 
+<!-- Text template -->
 <ng-template #textTemp>
     <p>Text goes here</p>
 </ng-template>
 
+<!-- Button template -->
 <ng-template #btnTemp>
-    <app-button-widget>Default</app-button-widget>
+    <div style="text-align: center;">
+        <ul class="mb-8 space-y-4 text-left content-description-text text-gray-500 dark:text-gray-400">
+            <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                <span>Individual configuration</span>
+            </li>
+            <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                <span>No setup, or hidden fees</span>
+            </li>
+            <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                <span>Team size: <span class="font-semibold text-gray-900 dark:text-white">1 developer</span></span>
+            </li>
+            <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                <span>Premium support: <span class="font-semibold text-gray-900 dark:text-white">6
+                        months</span></span>
+            </li>
+            <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <fa-icon [icon]="checkCircle" class="mr-1 text-green-600 text-sm"></fa-icon>
+                <span>Free updates: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
+            </li>
+        </ul>
+        <app-button-widget (click)="stepperWidget.next();">Submit</app-button-widget>
+    </div>
+</ng-template>
+
+<ng-template #tab_template_active let-item="item">
+    <span
+        class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
+        <svg aria-hidden="true" class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor"
+            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </span>
+</ng-template>
+
+<ng-template #tab_template_untouched let-item="item">
+    <span
+        class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 lg:w-6 lg:h-6 dark:text-gray-100" fill="currentColor"
+            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </span>
+</ng-template>
+
+<ng-template #tab_template_completed let-item="item">
+    <span
+        class="flex items-center justify-center w-10 h-10 bg-green-100 rounded-full lg:h-12 lg:w-12 dark:bg-green-800 shrink-0">
+        <svg aria-hidden="true" class="w-5 h-5 text-green-600 lg:w-6 lg:h-6 dark:text-green-300" fill="currentColor"
+            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </span>
 </ng-template>

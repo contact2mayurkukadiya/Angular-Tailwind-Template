@@ -1,14 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 // @import "~highlight.js/styles/github.css";
 
-// @apply px-6 py-4 rounded overflow-hidden shadow-lg hover:shadow-[#00000082] dark:hover:shadow-black shadow-[#00000047] dark:shadow-[#0000008c] bg-white dark:bg-slate-800 m-4 min-w-full min-h-full
 .white-card {
   @apply px-6 py-4 rounded bg-white dark:bg-slate-800 shadow-xl border;
 }
@@ -33,24 +29,41 @@
   @apply text-sm;
 }
 
-.default {
-  background-color: rgb(145, 154, 163);
+.stepper:not(.stepper-vertical)
+  .stepper-connector-default:not(:first-child)
+  .stepper-head:before {
+  flex: 1;
+  height: 1px;
+  width: 100%;
+  margin-right: 0.5rem;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.warning {
-  background-color: rgb(255, 182, 77);
+.stepper:not(.stepper-vertical)
+  .stepper-connector-default:not(:last-child)
+  .stepper-head:after {
+  flex: 1;
+  height: 1px;
+  width: 100%;
+  margin-left: 0.5rem;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.danger {
-  background-color: rgb(252, 97, 128);
+.stepper-connector-progressive-completed {
+  @apply after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800;
 }
 
-.success {
-  background-color: rgb(147, 190, 82);
-}
-
-.info {
-  background-color: rgb(98, 209, 243);
+.stepper-vertical .stepper-connector-default:not(:last-child):after {
+  position: absolute;
+  left: 2.25rem;
+  height: calc(100% - 2.45rem);
+  top: 3rem;
+  width: 1px;
+  margin-top: 0.5rem;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-menu-item-selected {

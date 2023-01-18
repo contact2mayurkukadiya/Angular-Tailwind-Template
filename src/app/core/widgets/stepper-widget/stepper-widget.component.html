@@ -1,12 +1,58 @@
-<ul class="stepper" data-mdb-stepper="stepper"
-    [ngClass]="{'stepper-vertical' : stepElement == 'vertical', 'stepper-active': stepActive?.stepData?.step_index == activeStepIndex}">
+<ul class="stepper" data-mdb-stepper="stepper" [ngClass]="{'stepper-vertical' : stepper_type == 'vertical'}">
     <ng-container *ngFor="let item of childrenArray">
-        <li class="stepper-step" (click)="addStepData(item);">
-            <div class="stepper-head">
-                <span class="stepper-head-icon">{{item?.stepData?.step_index}}</span>
-                <span class="stepper-head-text ml-1">{{item?.stepData?.step_title}}</span>
+        <li class="stepper-step" (click)="!stepper_navigation__buttons && tabActive(item);"
+            [id]="'step_' + item?.stepData?.step_index"
+            [ngClass]="{'stepper-active' : item.is_active, 'stepper-completed': item.is_visited }"
+            [class]="stepper_connector_class">
+            <div class="stepper-head" *ngIf="!item?.tab_template">
+                <a class="stepper-head-icon" *ngIf="false || item.is_visited && !item.is_active">
+                    <fa-icon [icon]="item?.stepData?.tab_completed_icon"></fa-icon>
+                </a>
+                <a class="stepper-head-icon"
+                    *ngIf="item?.is_active || !item?.is_visited">{{item?.stepData?.tab_index}}</a>
+                <span class="stepper-head-text ml-1" [ngClass]="{'stepper-active-text' : item.is_active }"
+                    *ngIf="item?.stepData?.step_title">
+                    <h3
+                        [ngClass]="item.is_active ? item?.stepData?.active_step_title_class : item?.stepData?.step_title_class ">
+                        {{item?.stepData?.step_title}}</h3>
+                    <p class="text-sm"
+                        [ngClass]="item.is_active ? item?.stepData?.active_step_description_class : item?.stepData?.step_description_class"
+                        *ngIf="item?.stepData?.step_description">{{item?.stepData?.step_description}}
+                    <p>
+                </span>
+            </div>
+            <div class="stepper-head" *ngIf="item?.tab_template">
+                <ng-container *ngIf="false || item?.is_active" [ngTemplateOutlet]="item?.tab_active_template">
+                </ng-container>
+                <ng-container *ngIf="false || item.is_visited && !item.is_active"
+                    [ngTemplateOutlet]="item?.tab_completed_template">
+                </ng-container>
+                <ng-container *ngIf="!(item.is_active || item.is_visited)"
+                    [ngTemplateOutlet]="item?.tab_untouched_template">
+                </ng-container>
+                <span class="stepper-head-text ml-1" [ngClass]="{'stepper-active-text' : item.is_active }"
+                    *ngIf="item?.stepData?.step_title">
+                    <h3
+                        [ngClass]="item.is_active ? item?.stepData?.active_step_title_class : item?.stepData?.step_title_class">
+                        {{item?.stepData?.step_title}}</h3>
+                    <p class="text-sm"
+                        [ngClass]="item.is_active ? item?.stepData?.active_step_description_class : item?.stepData?.step_description_class"
+                        *ngIf="item?.stepData?.step_description">{{item?.stepData?.step_description}}
+                    <p>
+                </span>
             </div>
         </li>
     </ng-container>
 </ul>
 <ng-content></ng-content>
+
+<div class="tab-buttons" *ngIf="false || stepper_navigation__buttons">
+    <button type="submit" (click)="previous()"
+        class="mr-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Previous
+    </button>
+    <button type="submit" (click)="next()"
+        class="ml-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Next
+    </button>
+</div>
