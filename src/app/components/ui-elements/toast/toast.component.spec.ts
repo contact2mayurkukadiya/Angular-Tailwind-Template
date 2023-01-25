@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepperWidgetComponent } from './stepper-widget.component';
+import { ToastComponent } from './toast.component';
 
-describe('StepperWidgetComponent', () => {
-  let component: StepperWidgetComponent;
-  let fixture: ComponentFixture<StepperWidgetComponent>;
+describe('ToastComponent', () => {
+  let component: ToastComponent;
+  let fixture: ComponentFixture<ToastComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StepperWidgetComponent ]
+      declarations: [ ToastComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StepperWidgetComponent);
+    fixture = TestBed.createComponent(ToastComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

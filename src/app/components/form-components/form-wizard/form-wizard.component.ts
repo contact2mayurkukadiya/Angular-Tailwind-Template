@@ -1,5 +1,4 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { StepperWidgetComponent } from 'src/app/core/widgets/stepper-widget/stepper-widget.component';
 import { faCheckCircle, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,9 +7,7 @@ import { faCheckCircle, faCircle } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./form-wizard.component.scss'],
 })
 export class FormWizardComponent implements OnInit {
-  @ViewChild(StepperWidgetComponent) stepperWidget: StepperWidgetComponent;
   tabnavigation__buttons: boolean = false;
-  StepperWidgetComponentref = StepperWidgetComponent;
   checkCircle = faCheckCircle;
   tab_Temp_arr: any;
   default_stepper: any = {

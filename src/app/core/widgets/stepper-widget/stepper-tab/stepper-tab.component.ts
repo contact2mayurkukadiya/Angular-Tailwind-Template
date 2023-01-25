@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'stepper-tab',
@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./stepper-tab.component.scss'],
 })
 export class StepperTabComponent implements OnInit {
+  @Input() stepper_type;
   @Input() stepData;
   @Input() tab_active_template;
   @Input() tab_completed_template;
@@ -14,6 +15,7 @@ export class StepperTabComponent implements OnInit {
   is_active: boolean = false;
   is_visited: boolean = false;
   tab_id: any = this.generateId(8);
+  @Input() tabTemplate:TemplateRef<any>;
 
   constructor() {}
 

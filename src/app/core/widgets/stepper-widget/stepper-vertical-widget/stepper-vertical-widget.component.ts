@@ -1,6 +1,7 @@
 import {
   ChangeDetectorRef,
   Component,
+  ComponentRef,
   ContentChild,
   ContentChildren,
   EventEmitter,
@@ -10,17 +11,20 @@ import {
   QueryList,
   TemplateRef,
 } from '@angular/core';
-import { StepperTabComponent } from './stepper-tab/stepper-tab.component';
+import { StepperTabComponent } from '../stepper-tab/stepper-tab.component';
 
 @Component({
-  selector: 'stepper',
-  templateUrl: './stepper-widget.component.html',
-  styleUrls: ['./stepper-widget.component.scss'],
+  selector: 'stepper-vertical',
+  templateUrl: './stepper-vertical-widget.component.html',
+  styleUrls: ['./stepper-vertical-widget.component.scss'],
 })
-export class StepperWidgetComponent implements OnInit {
+export class StepperVerticalWidgetComponent implements OnInit {
   @ContentChildren(StepperTabComponent)
   children: QueryList<StepperTabComponent>;
-  @Input() stepper_type: any = 'horizontal';
+  @ContentChildren(TemplateRef) children2: QueryList<
+    TemplateRef<StepperTabComponent>
+  >;
+  @Input() stepper_type: any;
   @Input() stepper_navigation__buttons: boolean = false;
   @Input() stepper_connector_class: any;
   @Output() nextStep = new EventEmitter<boolean>();
@@ -28,6 +32,8 @@ export class StepperWidgetComponent implements OnInit {
   @Output() stepChanged = new EventEmitter<boolean>();
   activeStepIndex: number = 0;
   childrenArray: any;
+  compo_temp = StepperTabComponent;
+  @Input() newTemplate: TemplateRef<any>;
 
   constructor(private ref: ChangeDetectorRef) {}
 
@@ -35,7 +41,6 @@ export class StepperWidgetComponent implements OnInit {
 
   ngAfterContentInit(): void {
     this.childrenArray = this.children.toArray();
-    console.log('this.childrenArray: ', this.childrenArray);
     this.tabActive(this.childrenArray[this.activeStepIndex]);
   }
 
@@ -61,5 +66,10 @@ export class StepperWidgetComponent implements OnInit {
       this.activeStepIndex = this.activeStepIndex - 1;
     this.tabActive(this.childrenArray[this.activeStepIndex]);
     this.previousStep.emit(true);
+  }
+
+  componentCreated(compRef: ComponentRef<any>, item) {
+    console.log('item: ', item);
+    console.log('compRef: ', compRef);
   }
 }

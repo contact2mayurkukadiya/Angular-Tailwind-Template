@@ -135,6 +135,13 @@ export class IndexSidebarComponent implements OnInit {
             'flex items-center p-2 pl-11 w-full font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
         },
         {
+          id: 'dditem314',
+          route: '/ui-elements/toast',
+          name: 'Toast',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
           id: 'dditem313',
           route: 'components/tooltip',
           name: 'Tooltip',
@@ -152,6 +159,31 @@ export class IndexSidebarComponent implements OnInit {
       ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
       fontClass: 'text-sm',
       route: '/ui-elements/animations',
+    },
+    {
+      id: 'dditem5',
+      item: 'Icons',
+      icon: faSpinner,
+      class:
+        'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+      fontClass: 'text-sm',
+      menuSubItem: [
+        {
+          id: 'dditem501',
+          route: 'ui-elements/icons-font-awesome',
+          name: 'Font Awesome',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+        {
+          id: 'dditem502',
+          route: 'ui-elements/icons-hero-icons',
+          name: 'Hero Icons',
+          subItemClass:
+            'flex items-center p-2 pl-11 w-full font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm',
+        },
+      ],
     },
     { separator: true, text: 'Form Elements' },
     {

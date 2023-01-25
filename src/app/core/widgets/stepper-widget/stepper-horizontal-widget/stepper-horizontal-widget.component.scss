@@ -136,3 +136,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.stepper-vertical .stepper-step {
+  // height: fit-content;
+  position: relative;
+}

@@ -16,6 +16,7 @@ import 'flowbite';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { CommonComponentModule } from './common/common-component.module';
 import { ScriptInjectorService } from './core/services/script-injector.service';
+import { StepperTabComponent } from './core/widgets/stepper-widget/stepper-tab/stepper-tab.component';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
 
@@ -50,5 +51,6 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     ScriptInjectorService,
   ],
   bootstrap: [AppComponent],
+  entryComponents: [StepperTabComponent]
 })
 export class AppModule {}
