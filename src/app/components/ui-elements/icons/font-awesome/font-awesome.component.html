@@ -10,15 +10,67 @@
 
 <div class="mt-4">
     <div class="grid grid-cols-2 gap-2">
-
-        <!-- Icons -->
+        <!-- Documentation -->
         <div class="white-card">
-            <h1 class="card-title-text mt-0 mb-2">Icons</h1>
-            <span class="description-text">Use these Icons styles with multiple colors to indicate an action or
-                link
-                within your website.</span>
+            <h1 class="card-title-text mt-0 mb-2">Documentation</h1>
+            <span class="description-text">The Font Awesome Angular component is available on npm and that's also where
+                we maintain its official documentation.</span>
             <div class="flex flex-wrap gap-2 mt-2">
+                <div class="relative overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Useful Link
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    What it's good for
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <a [href]="api_doc_link" target="_blank"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                        API docs
+                                        <fa-icon [icon]="['fas', 'share-square']" class="mr-4"></fa-icon>
+                                    </a>
+                                </th>
+                                <td class="px-6 py-4">
+                                    The official Angular component documentation
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <a [href]="github_projects_link" target="_blank"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                        GitHub project
+                                        <fa-icon [icon]="shareIcon" class="mr-4"></fa-icon>
+                                    </a>
+                                </th>
+                                <td class="px-6 py-4">
+                                    Where to submit issues and collaborate/contribute to codebase
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
+        <div class="white-card">
+            <h1 class="card-title-text mt-0 mb-2">Documentation</h1>
+            <span class="description-text">The Font Awesome Angular component is available on npm and that's also where
+                we maintain its official documentation.</span>
+            <div class="flex flex-wrap gap-2 mt-2">
+                <ng-container *ngFor="let item of faSolidicons">
+                    <fa-icon [icon]="['fas' , item]" class="mr-4"></fa-icon>
+                    <span>{{item}}</span>
+                </ng-container>
             </div>
         </div>
     </div>
+</div>
