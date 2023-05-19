@@ -248,16 +248,16 @@ export class IndexSidebarComponent implements OnInit {
       fontClass: 'text-sm',
       route: 'form/masking',
     },
-    {
-      id: 'dditem16',
-      item: 'Form Stepper',
-      icon: faHatWizard,
-      class:
-        'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
-      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
-      fontClass: 'text-sm',
-      route: 'form/stepper',
-    },
+    // {
+    //   id: 'dditem16',
+    //   item: 'Form Stepper',
+    //   icon: faHatWizard,
+    //   class:
+    //     'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+    //   ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+    //   fontClass: 'text-sm',
+    //   route: 'form/stepper',
+    // },
     {
       id: 'dditem17',
       item: 'Ready to use',
