@@ -33,6 +33,10 @@ const routes: Routes = [
             (m) => m.UiElementsModule
           ),
       },
+      {
+        path: '**',
+        redirectTo: 'components'
+      }
     ],
   },
 ];
@@ -41,4 +45,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

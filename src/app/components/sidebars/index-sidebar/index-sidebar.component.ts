@@ -20,16 +20,16 @@ export class IndexSidebarComponent implements OnInit {
   home = faHome;
   menuList: any = [
     { separator: true, text: 'Navigation' },
-    {
-      id: 'dditem1',
-      item: 'Dashboard',
-      icon: faHome,
-      class:
-        'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
-      ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
-      fontClass: 'text-sm',
-      route: '/',
-    },
+    // {
+    //   id: 'dditem1',
+    //   item: 'Dashboard',
+    //   icon: faHome,
+    //   class:
+    //     'flex items-center p-2 w-full font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+    //   ulClass: 'py-2 space-y-2 transition-all accordion-collapse collapse show',
+    //   fontClass: 'text-sm',
+    //   route: '/',
+    // },
     {
       id: 'dditem2',
       item: 'Widgets',
@@ -293,9 +293,9 @@ export class IndexSidebarComponent implements OnInit {
   ];
   // { separator: true, text: 'Pages' },
   copyMenuList: any = JSON.parse(JSON.stringify(this.menuList));
-  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
+  constructor(private router: Router, private cdr: ChangeDetectorRef) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   toggle(item) {
     item.selected = !item.selected;
