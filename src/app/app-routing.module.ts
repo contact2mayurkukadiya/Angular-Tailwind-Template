@@ -26,6 +26,10 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/views.module').then((m) => m.ViewsModule),
       },
+      {
+        path: '**',
+        redirectTo: 'components'
+      }
     ],
   },
 ];
@@ -34,4 +38,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
