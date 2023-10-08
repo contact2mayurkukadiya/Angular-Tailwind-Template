@@ -1,3 +1,3 @@
 # AngularTailwindTemplate
 
-Demo Video : [Link Here](https://hiteshwork13.github.io/angular-tailwind-template/components)
+Demo Video : [Link Here](https://contact2mayurkukadiya.github.io/Angular-Tailwind-Template/components)
